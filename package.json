@@ -1,0 +1,19 @@
+{
+  "name": "writing-sass",
+  "version": "1.0.0",
+  "description": "ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristinaPicazo/maintainable-css-with-sass.git"
+  },
+  "author": "Cristina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CristinaPicazo/maintainable-css-with-sass/issues"
+  },
+  "homepage": "https://github.com/CristinaPicazo/maintainable-css-with-sass#readme"
+}
