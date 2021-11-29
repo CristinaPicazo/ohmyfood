@@ -2,10 +2,9 @@
   "name": "writing-sass",
   "version": "1.0.0",
   "description": "ohmyfood",
-  "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed"
+    "sass": "sass --watch ./sass/main.scss:./style.css",
+    "prefix": "postcss --help"
   },
   "repository": {
     "type": "git",
@@ -17,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/CristinaPicazo/maintainable-css-with-sass/issues"
   },
-  "homepage": "https://github.com/CristinaPicazo/maintainable-css-with-sass#readme"
+  "homepage": "https://github.com/CristinaPicazo/maintainable-css-with-sass#readme",
+  "devDependencies": {
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.1",
+    "sass": "^1.43.5"
+  }
 }

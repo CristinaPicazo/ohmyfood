@@ -1,0 +1,28 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #9356DC;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 900;
+  color: coral;
+}
+
+header {
+  text-align: center;
+  background-color: #ffff01;
+}
+
+/*# sourceMappingURL=style.css.map */
