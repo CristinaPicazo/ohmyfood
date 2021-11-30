@@ -107,4 +107,24 @@ header .header__logo {
   margin: 1rem;
 }
 
+footer {
+  background: #333333;
+  color: white;
+  padding: 1.5rem;
+}
+footer h2 {
+  margin-bottom: 1rem;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  padding: 0.5rem 0;
+}
+footer ul li i {
+  width: 1rem;
+  height: 1rem;
+  padding-right: 0.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */
