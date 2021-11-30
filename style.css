@@ -3,26 +3,108 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #9356DC;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 100;
-  line-height: 1.7;
 }
 
 h1, h2, h3 {
   font-family: "Shrikhand", sans-serif;
-  font-weight: 900;
-  color: coral;
+  font-weight: 200;
 }
 
-header {
+header .header__logo {
   text-align: center;
-  background-color: #ffff01;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #faf9f9;
+  padding: 3rem 0;
+}
+.info .location {
+  background-color: #eeeded;
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  border-top-style: inset;
+}
+.info .location i {
+  margin: auto;
+}
+.info .location p {
+  margin: auto;
+  font-weight: bold;
+}
+.info h2 {
+  padding: 2rem;
+}
+.info p {
+  padding: 1rem;
+}
+.info button {
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  padding: 1rem;
+  border-radius: 25px;
+  color: white;
+  border-style: none;
+}
+.info button:hover {
+  transform: scale(1.2);
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+}
+.instructions li {
+  background: #faf9f9;
+  border-radius: 25px;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: inset -5px -5px #eeeded;
+}
+.instructions li i {
+  padding-right: 1.5rem;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  background: #faf9f9;
+}
+.menu-list h2 {
+  margin: 3rem 0 1rem 1.5rem;
+}
+.menu-list article a {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  border-radius: 20px;
+  margin: 1rem auto;
+  background: white;
+}
+.menu-list article a img {
+  height: 20rem;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.menu-list article a div {
+  display: flex;
+}
+.menu-list article a div .card-text {
+  margin: 1rem;
+  flex-direction: column;
+}
+.menu-list article a div i {
+  align-items: flex-end;
+  margin: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

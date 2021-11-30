@@ -1,0 +1,19 @@
+@use "../utils/variables";
+
+.instructions{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+
+    li{
+        background: variables.$colour-background;
+        border-radius: 25px;
+        padding: 2rem;
+        margin: 1rem;
+        box-shadow: inset -5px -5px variables.$colour-info;
+            i{
+                padding-right: 1.5rem;
+            }
+    }
+
+}

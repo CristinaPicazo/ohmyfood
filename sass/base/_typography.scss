@@ -1,14 +1,12 @@
 @use "../utils/variables";
 body {
     font-family: 'Roboto', sans-serif;
-    color: variables.$colour-primary;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 100;
-    line-height: 1.7;
 }
 
 h1, h2, h3 {
     font-family: 'Shrikhand', sans-serif;
-    font-weight: 900;
-    color: coral;
+    font-weight: 200;
+
 }

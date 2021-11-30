@@ -9,7 +9,7 @@
     <!-- Text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&family=Shrikhand&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,200,400;1,900&family=Shrikhand&display=swap"
         rel="stylesheet">
 
     <!-- Logo and Titles -->
@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 
     <!-- Css -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/477fe95c61.js" crossorigin="anonymous"></script>
@@ -29,43 +29,46 @@
 
     <header>
         <h1 class="header__logo">
-            <img class="logo" src="images/logo/ohmyfood.png" alt="ohmyfood logo">
+            <img src="images/logo/ohmyfood.png" alt="ohmyfood logo">
         </h1>
     </header>
 
     <main>
         <section class="info">
-            <p><i></i>Paris, Belleville</p>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Paris, Belleville</p>
+            </div>
             <h2>Book the menu you like</h2>
             <p>Discover top-of-the-art restaurants we picked for you</p>
             <button>Explore our restaurants</button>
         </section>
 
-        <section>
+        <section class="instructions">
             <h2>How it works</h2>
-            <nav class="instructions">
+            <nav>
                 <ol>
                     <li class="nav__link "><i class="fas fa-mobile-alt"></i>Choose a restaurant</li>
-                    <li class="nav__link"><i class="fas fa-list-ul"></i><a href="/about.html">Create your menu</a> </li>
-                    <li class="nav__link nav__link--active"><i class="fas fa-store"></i><a href="/contact.html">Go enjoy
-                            it at the restaurant</a></li>
+                    <li class="nav__link"><i class="fas fa-list-ul"></i>Create your menu</li>
+                    <li class="nav__link nav__link--active"><i class="fas fa-store"></i>Go enjoy it at the restaurant
+                    </li>
                 </ol>
 
             </nav>
         </section>
 
-        <section class="list">
+        <section class="menu-list">
             <h2>Restaurants</h2>
             <article class="card">
                 <a>
                     <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                         alt="The Full Palette Picture">
                     <div>
-                        <div>
+                        <div class="card-text">
                             <h3>The Full Palette</h3>
                             <p>New York</p>
                         </div>
-                        <div><i class="fas far fa-heart"></i></div>
+                        <i class="fas far fa-heart"></i>
                     </div>
                 </a>
             </article>
