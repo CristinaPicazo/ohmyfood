@@ -1,5 +1,11 @@
 header{
-    .header__logo{
+    margin: 1rem;
+    .logo{
         text-align: center;
+        margin: auto;
+        img{
+            height: 2rem;
+            width: 10rem;
+        }
     }
 }

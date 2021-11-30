@@ -4,16 +4,37 @@
     display: flex;
     flex-direction: column;
     margin: 1.5rem;
+    width: 95%;
 
-    li{
-        background: variables.$colour-background;
-        border-radius: 25px;
-        padding: 2rem;
-        margin: 1rem;
-        box-shadow: inset -5px -5px variables.$colour-info;
+    ol{    
+        li{
+            list-style:none inside; 
+            background: variables.$colour-background;
+            border-radius: 25px;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: inset -5px -5px variables.$colour-info;
             i{
                 padding-right: 1.5rem;
             }
+        }
+        li:before {
+            content:counter(item) ;
+            margin-right: 20px;
+            padding: 8px;
+            border-radius: 20px;
+            background: variables.$colour-primary;
+            color: #fff;
+            margin: 0 1rem 0 -3rem;
+        }
+        .nav__link--active{
+            background: #ead7ffa6;
+            i{
+                color: variables.$colour-primary;
+            }
+        }
     }
 
 }
+
+

@@ -16,8 +16,16 @@ h1, h2, h3 {
   font-weight: 200;
 }
 
-header .header__logo {
+header {
+  margin: 1rem;
+}
+header .logo {
   text-align: center;
+  margin: auto;
+}
+header .logo img {
+  height: 2rem;
+  width: 10rem;
 }
 
 .info {
@@ -25,20 +33,20 @@ header .header__logo {
   flex-direction: column;
   align-items: center;
   background-color: #faf9f9;
-  padding: 3rem 0;
+  text-align: center;
 }
 .info .location {
-  background-color: #eeeded;
   width: 100%;
+  background-color: #eeeded;
+  border-top-style: inset;
   display: flex;
   align-items: inherit;
-  border-top-style: inset;
+  padding: 1rem;
 }
 .info .location i {
   margin: auto;
 }
 .info .location p {
-  margin: auto;
   font-weight: bold;
 }
 .info h2 {
@@ -50,9 +58,12 @@ header .header__logo {
 .info button {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   padding: 1rem;
+  margin: 2rem;
   border-radius: 25px;
   color: white;
   border-style: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
 }
 .info button:hover {
   transform: scale(1.2);
@@ -62,16 +73,33 @@ header .header__logo {
   display: flex;
   flex-direction: column;
   margin: 1.5rem;
+  width: 95%;
 }
-.instructions li {
+.instructions ol li {
+  list-style: none inside;
   background: #faf9f9;
   border-radius: 25px;
   padding: 2rem;
   margin: 1rem;
   box-shadow: inset -5px -5px #eeeded;
 }
-.instructions li i {
+.instructions ol li i {
   padding-right: 1.5rem;
+}
+.instructions ol li:before {
+  content: counter(item);
+  margin-right: 20px;
+  padding: 8px;
+  border-radius: 20px;
+  background: #9356DC;
+  color: #fff;
+  margin: 0 1rem 0 -3rem;
+}
+.instructions ol .nav__link--active {
+  background: #ead7ffa6;
+}
+.instructions ol .nav__link--active i {
+  color: #9356DC;
 }
 
 .menu-list {
@@ -125,6 +153,10 @@ footer ul li i {
   width: 1rem;
   height: 1rem;
   padding-right: 0.5rem;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
