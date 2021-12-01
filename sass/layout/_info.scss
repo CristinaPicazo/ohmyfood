@@ -7,27 +7,13 @@
     background-color: variables.$colour-background;
     text-align: center;
     
-    .location{
-        width: 100%;
-        background-color: variables.$colour-info;
-        border-top-style: inset;
-        display: flex;
-        align-items: inherit;
-        padding: 1rem;
-        i{
-            margin: auto;
-        }
-        p {
-            font-weight: bold;
-        }
-    }
-
+    
     h2{
         padding: 2rem;
     }
-
+    
     p{
-        padding: 1rem;
+        padding: 0 2rem;
     }
 
     button{

@@ -28,32 +28,37 @@ header .logo img {
   width: 10rem;
 }
 
+.location {
+  background-color: #eeeded;
+  border-top-style: inset;
+  text-align: center;
+  padding: 1rem 0;
+}
+.location i {
+  padding-right: 0.5rem;
+  color: black;
+}
+.location input {
+  background: none;
+  border: none;
+}
+.location ::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
 .info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #faf9f9;
+  background-color: #f5f5f5f6;
   text-align: center;
-}
-.info .location {
-  width: 100%;
-  background-color: #eeeded;
-  border-top-style: inset;
-  display: flex;
-  align-items: inherit;
-  padding: 1rem;
-}
-.info .location i {
-  margin: auto;
-}
-.info .location p {
-  font-weight: bold;
 }
 .info h2 {
   padding: 2rem;
 }
 .info p {
-  padding: 1rem;
+  padding: 0 2rem;
 }
 .info button {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
@@ -88,7 +93,7 @@ header .logo img {
   border-radius: 0.3em;
 }
 .instructions nav ol li {
-  background: #faf9f9;
+  background: #f5f5f5f6;
   font-weight: bold;
   padding: 2rem;
   margin: 1rem;
@@ -118,34 +123,46 @@ header .logo img {
 .menu-list {
   display: flex;
   flex-direction: column;
-  background: #faf9f9;
+  background: #f5f5f5f6;
 }
 .menu-list h2 {
-  margin: 3rem 0 1rem 1.5rem;
+  margin: 2rem 0 0 1.5rem;
 }
-.menu-list article a {
+.menu-list .card {
+  background: white;
+  width: 90%;
+  margin: 1rem auto;
+  border-radius: 20px;
+}
+.menu-list .card a {
   display: flex;
   flex-direction: column;
-  width: 95%;
-  border-radius: 20px;
-  margin: 1rem auto;
-  background: white;
+  color: black;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
 }
-.menu-list article a img {
-  height: 20rem;
+.menu-list .card a img {
+  height: 10rem;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
-.menu-list article a div {
+.menu-list .card a .card-text {
+  background: red;
   display: flex;
+  flex-direction: row;
 }
-.menu-list article a div .card-text {
-  margin: 1rem;
+.menu-list .card a .card-text .card-description {
+  flex: 0.8;
+  display: flex;
   flex-direction: column;
-}
-.menu-list article a div i {
-  align-items: flex-end;
   margin: 1rem;
+}
+.menu-list .card a .card-text a {
+  text-align: end;
+  align-self: center;
+  font-size: 20px;
+  flex: 0.2;
+  padding-right: 1rem;
 }
 
 footer {

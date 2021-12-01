@@ -1,0 +1,21 @@
+@use "../utils/variables";
+
+.location{
+    background-color: variables.$colour-info;
+    border-top-style: inset;
+    text-align: center;
+    padding: 1rem 0;
+    i{
+        padding-right: 0.5rem;
+        color: black;
+    }
+    input {
+        background: none;
+        border: none;
+    }
+    ::placeholder {
+        color: black;
+        font-weight: bold;        
+    }
+
+}
