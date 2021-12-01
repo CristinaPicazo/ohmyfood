@@ -3,34 +3,45 @@
 .instructions{
     display: flex;
     flex-direction: column;
-    margin: 1.5rem;
     width: 95%;
-
-    ol{    
-        li{
-            list-style:none inside; 
-            background: variables.$colour-background;
-            border-radius: 25px;
-            padding: 2rem;
-            margin: 1rem;
-            box-shadow: inset -5px -5px variables.$colour-info;
-            i{
-                padding-right: 1.5rem;
+    h2{
+        margin: 1.5rem 0 0 1.5rem;
+        
+    }
+    nav{
+        margin-left: 1rem;
+        width: 100%;
+        ol{   
+            counter-reset: li;
+            list-style: none;
+            *list-style: decimal; 
+            border-radius: 0.3em;
+            li{
+                background: variables.$colour-background;
+                font-weight: bold;
+                padding: 2rem;
+                margin: 1rem;
+                box-shadow: inset -5px -5px variables.$colour-info;
+                border-radius: 30px;
+                i{
+                    padding-right: 1.5rem;
+                }
             }
-        }
-        li:before {
-            content:counter(item) ;
-            margin-right: 20px;
-            padding: 8px;
-            border-radius: 20px;
-            background: variables.$colour-primary;
-            color: #fff;
-            margin: 0 1rem 0 -3rem;
-        }
-        .nav__link--active{
-            background: #ead7ffa6;
-            i{
-                color: variables.$colour-primary;
+            li:before {
+                content:counter(li);
+                counter-increment: li;
+                padding: 8px;
+                border-radius: 50%;
+                background: variables.$colour-primary;
+                color: white;
+                margin: 0 1rem 0 -2.5rem;
+                font-size: 10px;
+            }
+            .nav__link--active{
+                background: #ead7ffa6;
+                i{
+                    color: variables.$colour-primary;
+                }
             }
         }
     }

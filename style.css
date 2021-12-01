@@ -72,33 +72,46 @@ header .logo img {
 .instructions {
   display: flex;
   flex-direction: column;
-  margin: 1.5rem;
   width: 95%;
 }
-.instructions ol li {
-  list-style: none inside;
+.instructions h2 {
+  margin: 1.5rem 0 0 1.5rem;
+}
+.instructions nav {
+  margin-left: 1rem;
+  width: 100%;
+}
+.instructions nav ol {
+  counter-reset: li;
+  list-style: none;
+  *list-style: decimal;
+  border-radius: 0.3em;
+}
+.instructions nav ol li {
   background: #faf9f9;
-  border-radius: 25px;
+  font-weight: bold;
   padding: 2rem;
   margin: 1rem;
   box-shadow: inset -5px -5px #eeeded;
+  border-radius: 30px;
 }
-.instructions ol li i {
+.instructions nav ol li i {
   padding-right: 1.5rem;
 }
-.instructions ol li:before {
-  content: counter(item);
-  margin-right: 20px;
+.instructions nav ol li:before {
+  content: counter(li);
+  counter-increment: li;
   padding: 8px;
-  border-radius: 20px;
+  border-radius: 50%;
   background: #9356DC;
-  color: #fff;
-  margin: 0 1rem 0 -3rem;
+  color: white;
+  margin: 0 1rem 0 -2.5rem;
+  font-size: 10px;
 }
-.instructions ol .nav__link--active {
+.instructions nav ol .nav__link--active {
   background: #ead7ffa6;
 }
-.instructions ol .nav__link--active i {
+.instructions nav ol .nav__link--active i {
   color: #9356DC;
 }
 
