@@ -1,0 +1,9 @@
+@mixin heart($full-colour:white){
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    background: pink;
+    font-size: 20px;
+    align-self: end;
+    color: $full-colour;
+}

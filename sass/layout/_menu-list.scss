@@ -1,4 +1,5 @@
 @use "../utils/variables";
+@import "../components/hearts";
 
 .menu-list{
     display: flex;
@@ -14,39 +15,27 @@
         width: 90%;
         margin: 1rem auto;
         border-radius: 20px;
+        display: flex;
+        flex-direction: column;
         a{            
-            display: flex;
-            flex-direction: column;
             color: black;
             text-decoration: none;
             padding-bottom: 0.5rem;
             
             img{
                 height: 10rem;
+                width: 100%;
                 border-top-right-radius: 20px;
                 border-top-left-radius: 20px;
             }
             .card-text{
-                background: red;
-                display: flex;
-                flex-direction: row;
-                .card-description{
-                    flex: 0.8;             
-                    display: flex;
-                    flex-direction: column;
-                    margin: 1rem;
-                }
-                a{
-                    text-align: end;            
-                    align-self: center;  
-                    font-size: 20px;
-                    flex: 0.2;
-                    padding-right: 1rem;
-                }               
+                padding-left: 1rem;
                     
             }
-                
-            
         }
+        button{
+            @include heart;              
+        }
+        
     }
 }

@@ -1,0 +1,18 @@
+@use "../utils/variables";
+@import "../utils/mixins";
+
+.menu-list{
+   .card{
+       button{
+           @include heart;
+           &:hover{
+            @include heart(variables.$colour-primary)
+           }
+       }
+    }
+}
+
+
+
+
+
