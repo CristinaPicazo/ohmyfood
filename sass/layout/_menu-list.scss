@@ -1,17 +1,17 @@
-@use "../utils/variables";
-@import "../components/hearts";
+@use '../utils/variables';
+@use '../components/hearts';
 
 .menu-list{
     display: flex;
     flex-direction: column;
-    background: variables.$colour-background;
+    background: variables.$colour-medium;
 
     h2{
         margin: 2rem 0 0 1.5rem
     }
 
     .card{
-        background: white;
+        background: variables.$colour-background;
         width: 90%;
         margin: 1rem auto;
         border-radius: 20px;
@@ -32,9 +32,6 @@
                 padding-left: 1rem;
                     
             }
-        }
-        button{
-            @include heart;              
         }
         
     }

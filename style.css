@@ -23,7 +23,7 @@ h1, h2, h3 {
   background: pink;
   font-size: 20px;
   align-self: end;
-  color: white;
+  color: #FFFFFF;
 }
 .menu-list .card button:hover {
   position: absolute;
@@ -48,7 +48,7 @@ header .logo img {
 }
 
 .location {
-  background-color: #eeeded;
+  background-color: #f2f2f2;
   border-top-style: inset;
   text-align: center;
   padding: 1rem 0;
@@ -71,7 +71,7 @@ header .logo img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f5f5f5f6;
+  background-color: #fafafa;
   text-align: center;
 }
 .info h2 {
@@ -85,9 +85,9 @@ header .logo img {
   padding: 1rem;
   margin: 2rem;
   border-radius: 25px;
-  color: white;
+  color: #FFFFFF;
   border-style: none;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px #e0e0e0;
   transition: all 0.3s ease 0s;
 }
 .info button:hover {
@@ -113,11 +113,11 @@ header .logo img {
   border-radius: 0.3em;
 }
 .instructions nav ol li {
-  background: #f5f5f5f6;
+  background: #FFFFFF;
   font-weight: bold;
   padding: 2rem;
   margin: 1rem;
-  box-shadow: inset -5px -5px #eeeded;
+  box-shadow: inset -5px -5px #e6e6e6;
   border-radius: 30px;
 }
 .instructions nav ol li i {
@@ -140,35 +140,16 @@ header .logo img {
   color: #9356DC;
 }
 
-.menu-list .card button {
-  position: absolute;
-  height: 2rem;
-  width: 2rem;
-  background: pink;
-  font-size: 20px;
-  align-self: end;
-  color: white;
-}
-.menu-list .card button:hover {
-  position: absolute;
-  height: 2rem;
-  width: 2rem;
-  background: pink;
-  font-size: 20px;
-  align-self: end;
-  color: #9356DC;
-}
-
 .menu-list {
   display: flex;
   flex-direction: column;
-  background: #f5f5f5f6;
+  background: #fafafa;
 }
 .menu-list h2 {
   margin: 2rem 0 0 1.5rem;
 }
 .menu-list .card {
-  background: white;
+  background: #FFFFFF;
   width: 90%;
   margin: 1rem auto;
   border-radius: 20px;
@@ -188,15 +169,6 @@ header .logo img {
 }
 .menu-list .card a .card-text {
   padding-left: 1rem;
-}
-.menu-list .card button {
-  position: absolute;
-  height: 2rem;
-  width: 2rem;
-  background: pink;
-  font-size: 20px;
-  align-self: end;
-  color: white;
 }
 
 footer {

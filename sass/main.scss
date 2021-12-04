@@ -1,16 +1,16 @@
-@use "./utils/variables";
-@use "./utils/functions";
-@use "./utils/mixins";
-@use "./utils/extensions";
+@use './utils/variables';
+@use './utils/functions';
+@use './utils/mixins';
+@use './utils/extensions';
 
-@use "./base/base";
-@use "./base/typography";
+@use './base/base';
+@use './base/typography';
 
-@use "./components/hearts";
+@use './components/hearts';
 
-@use "./layout/header";
-@use "./layout/location";
-@use "./layout/info";
-@use "./layout/instructions";
-@use "./layout/menu-list";
-@use "./layout/footer";
+@use './layout/header';
+@use './layout/location';
+@use './layout/info';
+@use './layout/instructions';
+@use './layout/menu-list';
+@use './layout/footer';

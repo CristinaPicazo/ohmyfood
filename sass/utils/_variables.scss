@@ -1,6 +1,8 @@
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
-$colour-info: #eeeded;
-$colour-background: #f5f5f5f6;
-$colour-footer: #333333;
+
+$colour-background: #FFFFFF;
+$colour-location: darken($colour-background,5%);
+$colour-medium: darken($colour-background, 2%);
+$colour-footer: darken($colour-background, 80%);

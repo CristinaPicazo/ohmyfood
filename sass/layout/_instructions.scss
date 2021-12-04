@@ -1,4 +1,4 @@
-@use "../utils/variables";
+@use '../utils/variables';
 
 .instructions{
     display: flex;
@@ -21,7 +21,7 @@
                 font-weight: bold;
                 padding: 2rem;
                 margin: 1rem;
-                box-shadow: inset -5px -5px variables.$colour-info;
+                box-shadow: inset -5px -5px darken(variables.$colour-background, 10%);
                 border-radius: 30px;
                 i{
                     padding-right: 1.5rem;
