@@ -16,31 +16,52 @@ h1, h2, h3 {
   font-weight: 200;
 }
 
-.menu-list .card button {
+.menu-list .card i {
   position: absolute;
+  bottom: 1rem;
+  right: 1rem;
   height: 2rem;
   width: 2rem;
-  background: pink;
   font-size: 20px;
+  border: none;
   align-self: end;
-  color: #FFFFFF;
+  cursor: pointer;
+  color: none;
 }
-.menu-list .card button:hover {
+.menu-list .card i::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 200;
+  content: "\f004";
+}
+.menu-list .card i:hover {
   position: absolute;
+  bottom: 1rem;
+  right: 1rem;
   height: 2rem;
   width: 2rem;
-  background: pink;
   font-size: 20px;
+  border: none;
   align-self: end;
+  cursor: pointer;
   color: #9356DC;
+}
+.menu-list .card i:hover::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
 }
 
 header {
-  margin: 1rem;
+  padding-top: 1rem;
 }
 header .logo {
   text-align: center;
   margin: auto;
+  vertical-align: middle;
+}
+header .logo i {
+  text-align: start;
+  z-index: 1;
 }
 header .logo img {
   height: 2rem;
@@ -49,9 +70,11 @@ header .logo img {
 
 .location {
   background-color: #f2f2f2;
-  border-top-style: inset;
   text-align: center;
   padding: 1rem 0;
+  box-shadow: 0px 7px 7px 0px #e0e0e0 inset;
+  -webkit-box-shadow: 0px 7px 7px 0px #e0e0e0 inset;
+  -moz-box-shadow: 0px 7px 7px 0px #e0e0e0 inset;
 }
 .location i {
   padding-right: 0.5rem;
@@ -87,8 +110,8 @@ header .logo img {
   border-radius: 25px;
   color: #FFFFFF;
   border-style: none;
-  box-shadow: 0px 8px 15px #e0e0e0;
   transition: all 0.3s ease 0s;
+  box-shadow: 0px 9px 16px -4px #e0e0e0;
 }
 .info button:hover {
   transform: scale(1.2);
@@ -105,6 +128,7 @@ header .logo img {
 .instructions nav {
   margin-left: 1rem;
   width: 100%;
+  margin-bottom: 2rem;
 }
 .instructions nav ol {
   counter-reset: li;
@@ -127,11 +151,12 @@ header .logo img {
   content: counter(li);
   counter-increment: li;
   padding: 8px;
-  border-radius: 50%;
   background: #9356DC;
   color: white;
   margin: 0 1rem 0 -2.5rem;
   font-size: 10px;
+  border-radius: 50%;
+  aspect-ratio: 1;
 }
 .instructions nav ol .nav__link--active {
   background: #ead7ffa6;
@@ -146,7 +171,7 @@ header .logo img {
   background: #fafafa;
 }
 .menu-list h2 {
-  margin: 2rem 0 0 1.5rem;
+  margin: 2rem 1.5rem 0 1.5rem;
 }
 .menu-list .card {
   background: #FFFFFF;
@@ -155,6 +180,7 @@ header .logo img {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .menu-list .card a {
   color: black;
@@ -168,7 +194,7 @@ header .logo img {
   border-top-left-radius: 20px;
 }
 .menu-list .card a .card-text {
-  padding-left: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 footer {

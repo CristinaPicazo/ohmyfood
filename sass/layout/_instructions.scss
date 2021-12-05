@@ -11,6 +11,7 @@
     nav{
         margin-left: 1rem;
         width: 100%;
+        margin-bottom: 2rem;
         ol{   
             counter-reset: li;
             list-style: none;
@@ -31,11 +32,12 @@
                 content:counter(li);
                 counter-increment: li;
                 padding: 8px;
-                border-radius: 50%;
                 background: variables.$colour-primary;
                 color: white;
                 margin: 0 1rem 0 -2.5rem;
                 font-size: 10px;
+                border-radius: 50%;
+                aspect-ratio: 1;
             }
             .nav__link--active{
                 background: #ead7ffa6;

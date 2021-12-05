@@ -3,12 +3,13 @@
 
 .menu-list{
    .card{
-       button{
+       i{
            @include heart;
            &:hover{
-            @include heart(variables.$colour-primary)
+            @include heart(900,variables.$colour-primary);
            }
        }
+
     }
 }
 

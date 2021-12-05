@@ -1,8 +1,14 @@
+
 header{
-    margin: 1rem;
+    padding-top: 1rem;
     .logo{
         text-align: center;
         margin: auto;
+        vertical-align: middle;
+        i{
+            text-align: start;
+            z-index: 1;
+        }
         img{
             height: 2rem;
             width: 10rem;
