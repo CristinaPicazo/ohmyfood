@@ -1,7 +1,6 @@
 @use './variables';
 
 @mixin heart( $font-weight:200, $color:none){    
-    //$font-weight:font-weight,
     position: absolute;
     bottom: 1rem;
     right: 1rem;
@@ -24,4 +23,20 @@
     box-shadow: 0px 7px 7px 0px darken(variables.$colour-medium, 10%) inset;
     -webkit-box-shadow: 0px 7px 7px 0px darken(variables.$colour-medium, 10%) inset;
     -moz-box-shadow: 0px 7px 7px 0px darken(variables.$colour-medium, 10%) inset;
+}
+
+@mixin tick{ 
+    display: none; 
+    &:hover{  
+        display: flex;
+        bottom: 1rem;
+        height: 2rem;
+        font-size: 20px;
+        padding: 0 1rem;
+        border: none;
+        align-self: end;
+        cursor: pointer;
+        background-color: variables.$colour-tertiary;
+    }
+
 }

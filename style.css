@@ -16,7 +16,7 @@ h1, h2, h3 {
   font-weight: 200;
 }
 
-.menu-list .card i {
+.menu-list .list .card i {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -28,12 +28,12 @@ h1, h2, h3 {
   cursor: pointer;
   color: none;
 }
-.menu-list .card i::before {
+.menu-list .list .card i::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 200;
   content: "\f004";
 }
-.menu-list .card i:hover {
+.menu-list .list .card i:hover {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -45,7 +45,42 @@ h1, h2, h3 {
   cursor: pointer;
   color: #9356DC;
 }
-.menu-list .card i:hover::before {
+.menu-list .list .card i:hover::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+}
+
+.menu-list .header-menu i {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  height: 2rem;
+  width: 2rem;
+  font-size: 20px;
+  border: none;
+  align-self: end;
+  cursor: pointer;
+  color: none;
+}
+.menu-list .header-menu i::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 200;
+  content: "\f004";
+}
+.menu-list .header-menu i:hover {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  height: 2rem;
+  width: 2rem;
+  font-size: 20px;
+  border: none;
+  align-self: end;
+  cursor: pointer;
+  color: #9356DC;
+}
+.menu-list .header-menu i:hover::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f004";
@@ -175,10 +210,17 @@ header .logo img {
     justify-content: center;
   }
 }
+.restaurant-picture {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+
 .menu-list {
   display: flex;
   flex-direction: column;
   background: #fafafa;
+  border: 2px solid red;
 }
 .menu-list h2 {
   margin: 2rem 1.5rem 0 1.5rem;
@@ -208,6 +250,55 @@ header .logo img {
   padding: 0.5rem 1rem;
 }
 
+.menu {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.menu .header-menu {
+  display: flex;
+}
+.menu .header-menu i {
+  text-align: end;
+}
+.menu h3 {
+  margin: 2rem 2rem 0.5rem 1.5rem;
+  font-size: 12px;
+  font-weight: normal;
+  border-bottom: solid #99E2D0;
+  border-width: 0.2rem;
+}
+.menu .card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+.menu .card .description {
+  flex: 0.5;
+}
+.menu .card .description p {
+  padding: 0.5rem 0;
+}
+.menu .card .price {
+  align-self: center;
+  text-align: end;
+  flex: 0.5;
+  font-weight: bold;
+}
+.menu .card i {
+  display: none;
+}
+.menu .card i:hover {
+  display: flex;
+  bottom: 1rem;
+  height: 2rem;
+  font-size: 20px;
+  padding: 0 1rem;
+  border: none;
+  align-self: end;
+  cursor: pointer;
+  background-color: #99E2D0;
+}
+
 @media (min-width: 768px) {
   /* For tablets: */
   .menu-list h2 {
@@ -219,6 +310,10 @@ header .logo img {
   }
   .menu-list .list .card {
     width: 45%;
+  }
+  .menu-list h3 {
+    font-size: 12px;
+    font-weight: normal;
   }
 }
 @media only screen and (min-width: 992px) {

@@ -2,7 +2,21 @@
 @import '../utils/mixins';
 
 .menu-list{
-   .card{
+    .list{
+        .card{
+            i{
+                @include heart;
+                &:hover{
+                    @include heart(900,variables.$colour-primary);
+                }
+            }
+        }
+
+    }
+}
+
+.menu-list{
+   .header-menu{
        i{
            @include heart;
            &:hover{

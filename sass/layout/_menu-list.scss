@@ -1,10 +1,17 @@
 @use '../utils/variables';
 @use '../components/hearts';
+@import '../utils/mixins';
 
+.restaurant-picture{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
 .menu-list{
     display: flex;
     flex-direction: column;
     background: variables.$colour-medium;
+    border: 2px solid red;
 
     h2{
         margin: 2rem 1.5rem 0 1.5rem
@@ -38,6 +45,48 @@
         
     }
 }
+.menu{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    .header-menu{
+        display: flex;
+        i{
+            text-align: end;
+        }
+    }
+    h3{
+        margin: 2rem 2rem 0.5rem 1.5rem;
+        font-size: 12px;
+        font-weight: normal;
+        //text-decoration: underline variables.$colour-tertiary;
+        border-bottom: solid variables.$colour-tertiary;
+        border-width: 0.2rem;
+    }
+    .card{
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+
+        .description{
+            flex: 0.5;
+            p{
+                padding: 0.5rem 0;
+            }
+        }
+        
+        .price{
+            align-self: center;
+            text-align: end;
+            flex: 0.5;
+            font-weight: bold;
+
+        }
+
+        i{
+            @include tick;
+        }
+    }
+}
 
 
 @media (min-width: 768px) {
@@ -52,6 +101,10 @@
             .card{
                 width: 45%;
             }
+        }
+        h3{
+            font-size: 12px;
+            font-weight: normal;
         }
 
     }
