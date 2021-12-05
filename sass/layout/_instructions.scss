@@ -50,4 +50,17 @@
 
 }
 
+@media (min-width: 768px) {
+    /* For tablets: */
+    .instructions{
+        text-align: center;
+        nav{
+            ol{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
 

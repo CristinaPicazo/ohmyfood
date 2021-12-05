@@ -165,6 +165,16 @@ header .logo img {
   color: #9356DC;
 }
 
+@media (min-width: 768px) {
+  /* For tablets: */
+  .instructions {
+    text-align: center;
+  }
+  .instructions nav ol {
+    display: flex;
+    justify-content: center;
+  }
+}
 .menu-list {
   display: flex;
   flex-direction: column;
@@ -192,11 +202,34 @@ header .logo img {
   width: 100%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+  object-fit: cover;
 }
 .menu-list .card a .card-text {
   padding: 0.5rem 1rem;
 }
 
+@media (min-width: 768px) {
+  /* For tablets: */
+  .menu-list h2 {
+    text-align: center;
+  }
+  .menu-list .list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .menu-list .list .card {
+    width: 45%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* For desktop: */
+  .menu-list .list .card {
+    width: 24%;
+  }
+  .menu-list .list .card i {
+    bottom: 0;
+  }
+}
 footer {
   background: #333333;
   color: white;
@@ -219,6 +252,13 @@ footer ul li i {
 footer ul li a {
   text-decoration: none;
   color: white;
+}
+
+@media (min-width: 768px) {
+  /* For tablets: */
+  footer {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

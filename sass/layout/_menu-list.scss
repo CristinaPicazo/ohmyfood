@@ -28,6 +28,7 @@
                 width: 100%;
                 border-top-right-radius: 20px;
                 border-top-left-radius: 20px;
+                object-fit: cover;
             }
             .card-text{
                 padding: 0.5rem 1rem;
@@ -35,5 +36,39 @@
             }
         }
         
+    }
+}
+
+
+@media (min-width: 768px) {
+    /* For tablets: */
+    .menu-list{
+        h2{
+            text-align: center;
+        }
+        .list{
+            display: flex;
+            flex-flow: row wrap;
+            .card{
+                width: 45%;
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    /* For desktop: */ 
+    .menu-list{
+        .list{
+            .card{
+                width: 24%;
+                i{
+                    bottom: 0;
+                }
+            }
+
+        }
+    
     }
 }
