@@ -26,11 +26,15 @@
 }
 
 @mixin tick{ 
+    display: flex;
+    color: white;
+    align-items: center;
     &:hover{  
+        visibility: visible;
         display: flex;
         height: fit-content;
         width: fit-content;
-        padding: 2rem 1rem;
+        padding: 2rem 1.5rem;
         font-size: 20px;
         border: none;
         align-self: end;
@@ -38,7 +42,22 @@
         background-color: variables.$colour-tertiary;
         color: variables.$colour-background;
         border-top-right-radius: 20px;
-        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
+}
+
+@mixin button($margin:2rem){
+    background: linear-gradient(0deg, variables.$colour-primary, variables.$colour-secondary);
+    padding: 1rem;
+    margin: $margin;
+    border-radius: 25px;
+    color: variables.$colour-background;
+    border-style: none;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 9px 16px -4px darken(variables.$colour-medium, 10%);
+
+    &:hover{
+        transform: scale(1.2);
+    }
 }

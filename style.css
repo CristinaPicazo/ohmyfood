@@ -228,7 +228,7 @@ header .logo img {
 .menu-list .card {
   background: #FFFFFF;
   width: 90%;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -268,12 +268,13 @@ header .logo img {
   border-width: 0.2rem;
 }
 .menu .card {
-  padding: 1rem;
   display: flex;
   flex-direction: row;
 }
 .menu .card .description {
-  flex: 0.5;
+  white-space: nowrap;
+  flex: 1.5;
+  padding: 1rem;
 }
 .menu .card .description p {
   padding: 0.5rem 0;
@@ -283,20 +284,41 @@ header .logo img {
   text-align: end;
   flex: 0.5;
   font-weight: bold;
+  padding: 0 1rem;
 }
 .menu .card i {
-  display: none;
+  display: flex;
+  color: white;
+  align-items: center;
 }
 .menu .card i:hover {
+  visibility: visible;
   display: flex;
-  bottom: 1rem;
-  height: 2rem;
+  height: fit-content;
+  width: fit-content;
+  padding: 2rem 1.5rem;
   font-size: 20px;
-  padding: 0 1rem;
   border: none;
   align-self: end;
   cursor: pointer;
   background-color: #99E2D0;
+  color: #FFFFFF;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.order {
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  padding: 1rem;
+  margin: 2rem 12rem;
+  border-radius: 25px;
+  color: #FFFFFF;
+  border-style: none;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 9px 16px -4px #e0e0e0;
+}
+.order:hover {
+  transform: scale(1.2);
 }
 
 @media (min-width: 768px) {
