@@ -26,17 +26,19 @@
 }
 
 @mixin tick{ 
-    display: none; 
     &:hover{  
         display: flex;
-        bottom: 1rem;
-        height: 2rem;
+        height: fit-content;
+        width: fit-content;
+        padding: 2rem 1rem;
         font-size: 20px;
-        padding: 0 1rem;
         border: none;
         align-self: end;
         cursor: pointer;
         background-color: variables.$colour-tertiary;
+        color: variables.$colour-background;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
     }
 
 }
