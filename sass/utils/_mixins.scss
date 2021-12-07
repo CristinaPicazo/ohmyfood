@@ -1,6 +1,6 @@
 @use './variables';
 
-@mixin heart( $font-weight:200, $color:none){    
+@mixin heart($font-weight:200, $color:none){    
     position: absolute;
     bottom: 1rem;
     right: 1rem;

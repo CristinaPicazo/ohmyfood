@@ -45,53 +45,6 @@
         
     }
 }
-.menu{
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    .header-menu{
-        display: flex;
-        i{
-            text-align: end;
-        }
-    }
-    h3{
-        margin: 2rem 2rem 0.5rem 1.5rem;
-        font-size: 12px;
-        font-weight: normal;
-        //text-decoration: underline variables.$colour-tertiary;
-        border-bottom: solid variables.$colour-tertiary;
-        border-width: 0.2rem;
-    }
-    .card{
-        display: flex;
-        flex-direction: row;
-
-        .description{
-            white-space: nowrap;
-            flex: 1.5;
-            padding: 1rem;
-            p{
-                padding: 0.5rem 0;
-            }
-        }
-        
-        .price{
-            align-self: center;
-            text-align: end;
-            flex: 0.5;
-            font-weight: bold;
-            padding: 0 1rem;
-        }
-
-        i{
-            @include tick;
-        }
-    }
-}
-
-.order{
-    @include button(2rem 12rem);
-}
 
 
 @media (min-width: 768px) {

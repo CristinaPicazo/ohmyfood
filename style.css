@@ -104,12 +104,12 @@ header .logo img {
 }
 
 .location {
-  background-color: #f2f2f2;
+  background-color: #e6e6e6;
   text-align: center;
   padding: 1rem 0;
-  box-shadow: 0px 7px 7px 0px #e0e0e0 inset;
-  -webkit-box-shadow: 0px 7px 7px 0px #e0e0e0 inset;
-  -moz-box-shadow: 0px 7px 7px 0px #e0e0e0 inset;
+  box-shadow: 0px 7px 7px 0px #d9d9d9 inset;
+  -webkit-box-shadow: 0px 7px 7px 0px #d9d9d9 inset;
+  -moz-box-shadow: 0px 7px 7px 0px #d9d9d9 inset;
 }
 .location i {
   padding-right: 0.5rem;
@@ -129,7 +129,7 @@ header .logo img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fafafa;
+  background-color: #f2f2f2;
   text-align: center;
 }
 .info h2 {
@@ -146,7 +146,7 @@ header .logo img {
   color: #FFFFFF;
   border-style: none;
   transition: all 0.3s ease 0s;
-  box-shadow: 0px 9px 16px -4px #e0e0e0;
+  box-shadow: 0px 9px 16px -4px #d9d9d9;
 }
 .info button:hover {
   transform: scale(1.2);
@@ -176,6 +176,7 @@ header .logo img {
   font-weight: bold;
   padding: 2rem;
   margin: 1rem;
+  background: #f2f2f2;
   box-shadow: inset -5px -5px #e6e6e6;
   border-radius: 30px;
 }
@@ -219,7 +220,7 @@ header .logo img {
 .menu-list {
   display: flex;
   flex-direction: column;
-  background: #fafafa;
+  background: #f2f2f2;
   border: 2px solid red;
 }
 .menu-list h2 {
@@ -250,11 +251,38 @@ header .logo img {
   padding: 0.5rem 1rem;
 }
 
+@media (min-width: 768px) {
+  /* For tablets: */
+  .menu-list h2 {
+    text-align: center;
+  }
+  .menu-list .list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .menu-list .list .card {
+    width: 45%;
+  }
+  .menu-list h3 {
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* For desktop: */
+  .menu-list .list .card {
+    width: 24%;
+  }
+  .menu-list .list .card i {
+    bottom: 0;
+  }
+}
 .menu {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
 .menu .header-menu {
+  position: relative;
   display: flex;
 }
 .menu .header-menu i {
@@ -315,38 +343,12 @@ header .logo img {
   color: #FFFFFF;
   border-style: none;
   transition: all 0.3s ease 0s;
-  box-shadow: 0px 9px 16px -4px #e0e0e0;
+  box-shadow: 0px 9px 16px -4px #d9d9d9;
 }
 .order:hover {
   transform: scale(1.2);
 }
 
-@media (min-width: 768px) {
-  /* For tablets: */
-  .menu-list h2 {
-    text-align: center;
-  }
-  .menu-list .list {
-    display: flex;
-    flex-flow: row wrap;
-  }
-  .menu-list .list .card {
-    width: 45%;
-  }
-  .menu-list h3 {
-    font-size: 12px;
-    font-weight: normal;
-  }
-}
-@media only screen and (min-width: 992px) {
-  /* For desktop: */
-  .menu-list .list .card {
-    width: 24%;
-  }
-  .menu-list .list .card i {
-    bottom: 0;
-  }
-}
 footer {
   background: #333333;
   color: white;
