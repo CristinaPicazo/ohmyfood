@@ -1,3 +1,19 @@
-# Produce maintainable CSS stylesheets with SASS
+# Ohmyfood
 
-CSS is the palette we use to paint the web, making pages beautiful, identifiable, and responsive. In this class we’ll learn to write clean, maintainable, and modular CSS code through the implementation of designed naming and file structures, such as BEM, and the use of SASS, a CSS precompiler.
+## General info
+OpenClassRooms Web Developer Project 3
+
+# Technologies
+  * HTML
+  * CSS
+  * SASS
+
+# Challenges
+Objectives
+We would like to open our services in the French capital.
+  * Phase 1: Develop a site offering the menu of four great Parisian restaurants.
+  * Phase 2: Allow online booking and menu composition.
+
+  
+# Published
+ https://cristinapicazo.github.io/ohmyfood/
