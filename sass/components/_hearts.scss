@@ -1,13 +1,13 @@
 @use '../utils/variables';
-@import '../utils/mixins';
+@use '../utils/mixins';
 
 .menu-list{
     .list{
         .card{
             i{
-                @include heart;
+                @include mixins.heart;
                 &:hover{
-                    @include heart(900,variables.$colour-primary);
+                    @include mixins.heart(900,variables.$colour-primary);
                 }
             }
         }
@@ -18,9 +18,9 @@
 .menu-list{
    .header-menu{
        i{
-           @include heart;
+           @include mixins.heart;
            &:hover{
-            @include heart(900,variables.$colour-primary);
+            @include mixins.heart(900,variables.$colour-primary);
            }
        }
 

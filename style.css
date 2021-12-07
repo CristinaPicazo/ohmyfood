@@ -155,14 +155,9 @@ header .logo img {
 .instructions {
   display: flex;
   flex-direction: column;
-  width: 95%;
-}
-.instructions h2 {
-  margin: 1.5rem 0 0 1.5rem;
+  margin: 2rem 1rem;
 }
 .instructions nav {
-  margin-left: 1rem;
-  width: 100%;
   margin-bottom: 2rem;
 }
 .instructions nav ol {
@@ -172,6 +167,7 @@ header .logo img {
   border-radius: 0.3em;
 }
 .instructions nav ol li {
+  position: relative;
   background: #FFFFFF;
   font-weight: bold;
   padding: 2rem;
@@ -179,6 +175,9 @@ header .logo img {
   background: #f2f2f2;
   box-shadow: inset -5px -5px #e6e6e6;
   border-radius: 30px;
+  display: flex;
+  align-items: center;
+  flex-basis: 30%;
 }
 .instructions nav ol li i {
   padding-right: 1.5rem;
@@ -186,13 +185,18 @@ header .logo img {
 .instructions nav ol li:before {
   content: counter(li);
   counter-increment: li;
-  padding: 8px;
   background: #9356DC;
   color: white;
-  margin: 0 1rem 0 -2.5rem;
-  font-size: 10px;
+  font-size: 12px;
   border-radius: 50%;
   aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 0;
 }
 .instructions nav ol .nav__link--active {
   background: #ead7ffa6;
@@ -208,7 +212,7 @@ header .logo img {
   }
   .instructions nav ol {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 .restaurant-picture {
@@ -228,12 +232,12 @@ header .logo img {
 }
 .menu-list .card {
   background: #FFFFFF;
-  width: 90%;
   margin: 0.5rem auto;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
 }
 .menu-list .card a {
   color: black;
@@ -257,11 +261,9 @@ header .logo img {
     text-align: center;
   }
   .menu-list .list {
-    display: flex;
-    flex-flow: row wrap;
-  }
-  .menu-list .list .card {
-    width: 45%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
   .menu-list h3 {
     font-size: 12px;
@@ -270,11 +272,9 @@ header .logo img {
 }
 @media only screen and (min-width: 992px) {
   /* For desktop: */
-  .menu-list .list .card {
-    width: 24%;
-  }
-  .menu-list .list .card i {
-    bottom: 0;
+  .menu-list .list {
+    display: flex;
+    flex-wrap: nowrap;
   }
 }
 .menu {

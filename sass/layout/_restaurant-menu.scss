@@ -1,6 +1,6 @@
 @use '../utils/variables';
 @use '../components/hearts';
-@import '../utils/mixins';
+@use '../utils/mixins';
 
 .menu{
     border-top-right-radius: 20px;
@@ -42,11 +42,11 @@
         }
 
         i{
-            @include tick;
+            @include mixins.tick;
         }
     }
 }
 
 .order{
-    @include button(2rem 12rem);
+    @include mixins.button(2rem 12rem);
 }

@@ -3,21 +3,17 @@
 .instructions{
     display: flex;
     flex-direction: column;
-    width: 95%;
-    h2{
-        margin: 1.5rem 0 0 1.5rem;
-        
-    }
+    margin: 2rem 1rem;
     nav{
-        margin-left: 1rem;
-        width: 100%;
         margin-bottom: 2rem;
         ol{   
             counter-reset: li;
             list-style: none;
             *list-style: decimal; 
             border-radius: 0.3em;
+            
             li{
+                position: relative;
                 background: variables.$colour-background;
                 font-weight: bold;
                 padding: 2rem;
@@ -25,6 +21,9 @@
                 background: variables.$colour-medium;
                 box-shadow: inset -5px -5px darken(variables.$colour-background, 10%);
                 border-radius: 30px;
+                display: flex;
+                align-items: center;
+                flex-basis: 30%;
                 i{
                     padding-right: 1.5rem;
                 }
@@ -32,13 +31,20 @@
             li:before {
                 content:counter(li);
                 counter-increment: li;
-                padding: 8px;
                 background: variables.$colour-primary;
                 color: white;
-                margin: 0 1rem 0 -2.5rem;
-                font-size: 10px;
+                font-size: 12px;
                 border-radius: 50%;
                 aspect-ratio: 1;
+                display: grid;
+                place-items: center;
+                width: 2rem;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                left: 0;
+
+
             }
             .nav__link--active{
                 background: #ead7ffa6;
@@ -58,7 +64,7 @@
         nav{
             ol{
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
             }
         }
     }
