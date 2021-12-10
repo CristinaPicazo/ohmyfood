@@ -225,10 +225,12 @@ header .logo img {
   display: flex;
   flex-direction: column;
   background: #f2f2f2;
-  border: 2px solid red;
+  padding: 0 1rem;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 .menu-list h2 {
-  margin: 2rem 1.5rem 0 1.5rem;
+  margin: 2rem 0;
 }
 .menu-list .card {
   background: #FFFFFF;
@@ -250,6 +252,14 @@ header .logo img {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   object-fit: cover;
+  position: relative;
+}
+.menu-list .card a .new-box {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #99E2D0;
+  padding: 0.5rem 2rem;
 }
 .menu-list .card a .card-text {
   padding: 0.5rem 1rem;
@@ -277,9 +287,15 @@ header .logo img {
     flex-wrap: nowrap;
   }
 }
+.restaurant-picture {
+  z-index: -1;
+  position: relative;
+  margin-bottom: -3rem;
+}
+
 .menu {
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
 }
 .menu .header-menu {
   position: relative;

@@ -6,15 +6,18 @@
     height: 20rem;
     width: 100%;
     object-fit: cover;
+
 }
 .menu-list{
     display: flex;
     flex-direction: column;
     background: variables.$colour-medium;
-    border: 2px solid red;
+    padding: 0 1rem;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 
     h2{
-        margin: 2rem 1.5rem 0 1.5rem
+        margin: 2rem 0;
     }
 
     .card{
@@ -36,6 +39,14 @@
                 border-top-right-radius: 20px;
                 border-top-left-radius: 20px;
                 object-fit: cover;
+                position: relative;
+            }
+            .new-box{
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                background: variables.$colour-tertiary;
+                padding: 0.5rem 2rem;
             }
             .card-text{
                 padding: 0.5rem 1rem;

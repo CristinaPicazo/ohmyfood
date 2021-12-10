@@ -2,9 +2,14 @@
 @use '../components/hearts';
 @use '../utils/mixins';
 
+.restaurant-picture{
+    z-index: -1;
+    position: relative;
+    margin-bottom: -3rem;
+}
 .menu{
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
     .header-menu{
         position: relative;
         display: flex;
@@ -16,7 +21,6 @@
         margin: 2rem 2rem 0.5rem 1.5rem;
         font-size: 12px;
         font-weight: normal;
-        //text-decoration: underline variables.$colour-tertiary;
         border-bottom: solid variables.$colour-tertiary;
         border-width: 0.2rem;
     }
