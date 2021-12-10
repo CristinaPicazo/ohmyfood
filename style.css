@@ -11,7 +11,7 @@ body {
   font-weight: 100;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 200;
 }
@@ -86,21 +86,20 @@ h1, h2, h3 {
   content: "\f004";
 }
 
-header {
-  padding-top: 1rem;
-}
 header .logo {
   text-align: center;
   margin: auto;
   vertical-align: middle;
+  display: flex;
+  margin: 0.5rem 1rem;
 }
 header .logo i {
-  text-align: start;
-  z-index: 1;
+  color: black;
 }
 header .logo img {
   height: 2rem;
   width: 10rem;
+  margin: auto;
 }
 
 .location {
@@ -141,12 +140,13 @@ header .logo img {
 .info button {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   padding: 1rem;
-  margin: 2rem;
+  width: 15rem;
   border-radius: 25px;
   color: #FFFFFF;
   border-style: none;
   transition: all 0.3s ease 0s;
   box-shadow: 0px 9px 16px -4px #d9d9d9;
+  margin: 2rem auto;
 }
 .info button:hover {
   transform: scale(1.2);
@@ -305,15 +305,23 @@ header .logo img {
   text-align: end;
 }
 .menu h3 {
-  margin: 2rem 2rem 0.5rem 1.5rem;
-  font-size: 12px;
+  margin: 1rem 0.5rem;
+  font-size: 15px;
   font-weight: normal;
+}
+.menu h3:before {
   border-bottom: solid #99E2D0;
-  border-width: 0.2rem;
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 1rem;
+  padding: 0.2rem;
 }
 .menu .card {
+  transition-property: all 3s;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 .menu .card .description {
   white-space: nowrap;
@@ -330,19 +338,12 @@ header .logo img {
   font-weight: bold;
   padding: 0 1rem;
 }
-.menu .card i {
-  display: flex;
-  color: white;
-  align-items: center;
-}
-.menu .card i:hover {
+.menu .card:hover > i {
   visibility: visible;
   display: flex;
-  height: fit-content;
-  width: fit-content;
+  border: 1px solid #99E2D0;
   padding: 2rem 1.5rem;
   font-size: 20px;
-  border: none;
   align-self: end;
   cursor: pointer;
   background-color: #99E2D0;
@@ -350,16 +351,22 @@ header .logo img {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+.menu .card i {
+  display: flex;
+  color: white;
+  align-items: center;
+}
 
 .order {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   padding: 1rem;
-  margin: 2rem 12rem;
+  width: 10rem;
   border-radius: 25px;
   color: #FFFFFF;
   border-style: none;
   transition: all 0.3s ease 0s;
   box-shadow: 0px 9px 16px -4px #d9d9d9;
+  margin: 2rem auto;
 }
 .order:hover {
   transform: scale(1.2);

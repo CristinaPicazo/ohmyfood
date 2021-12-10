@@ -1,17 +1,19 @@
 
 header{
-    padding-top: 1rem;
     .logo{
         text-align: center;
         margin: auto;
         vertical-align: middle;
+        display: flex;
+        margin: 0.5rem 1rem;
         i{
-            text-align: start;
-            z-index: 1;
+            color: black;
+
         }
         img{
             height: 2rem;
             width: 10rem;
+            margin: auto;
         }
     }
 }
