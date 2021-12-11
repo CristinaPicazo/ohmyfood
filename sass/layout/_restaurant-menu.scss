@@ -30,8 +30,10 @@
             padding: 0.2rem;
         }
     }
+
     .card{
-        transition-property: all 3s;
+        transform-origin: 50% top;
+
         display: flex;
         flex-direction: row;
         cursor: pointer;
@@ -67,4 +69,18 @@
 
 .order{
     @include mixins.button(10rem);
+}
+
+@media only screen and (min-width: 1100px) {
+    /* For desktop: */ 
+    .menu{
+        .dishes{
+            display: flex;
+        
+            .card{
+                margin: 0.5rem;
+            }
+        }
+    }
+
 }
