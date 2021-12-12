@@ -125,7 +125,7 @@ header .logo img {
   color: black;
 }
 .location input {
-  background: none;
+  background: transparent;
   border: none;
   width: 7rem;
 }
