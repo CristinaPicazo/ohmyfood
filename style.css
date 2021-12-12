@@ -1,3 +1,13 @@
+@keyframes appear {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 *,
 *::after,
 *::before {
@@ -150,6 +160,7 @@ header .logo img {
 }
 .info button:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 .instructions {
@@ -226,8 +237,6 @@ header .logo img {
   flex-direction: column;
   background: #f2f2f2;
   padding: 0 1rem;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
 }
 .menu-list h2 {
   margin: 2rem 0;
@@ -318,10 +327,19 @@ header .logo img {
   padding: 0.2rem;
 }
 .menu .card {
-  transform-origin: 50% top;
+  animation: appear 1s;
   display: flex;
   flex-direction: row;
   cursor: pointer;
+}
+.menu .card:nth-child(1) {
+  animation-delay: 100ms;
+}
+.menu .card:nth-child(2) {
+  animation-delay: 200ms;
+}
+.menu .card:nth-child(3) {
+  animation-delay: 300ms;
 }
 .menu .card .description {
   white-space: nowrap;
@@ -370,6 +388,7 @@ header .logo img {
 }
 .order:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 1100px) {

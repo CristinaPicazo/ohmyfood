@@ -1,6 +1,7 @@
 @use '../utils/variables';
 @use '../components/hearts';
 @use '../utils/mixins';
+@use '../utils/animations';
 
 .restaurant-picture{
     z-index: -1;
@@ -30,10 +31,13 @@
             padding: 0.2rem;
         }
     }
-
     .card{
-        transform-origin: 50% top;
-
+        @for $i from 1 through 3{
+            &:nth-child(#{$i}){
+                animation-delay: 100ms * $i;
+            }
+        }
+        animation: appear 1s;
         display: flex;
         flex-direction: row;
         cursor: pointer;
@@ -66,6 +70,7 @@
         }
     }
 }
+
 
 .order{
     @include mixins.button(10rem);
