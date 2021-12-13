@@ -1,0 +1,28 @@
+@use '../utils/variables';
+@use '../utils/animations';
+
+.loader{
+    $spin-count: 4;
+    $spin-duration: 4s;
+    $disappear-duration: 1s;
+    animation: disappear $disappear-duration forwards $spin-count*$spin-duration;
+    position: fixed;
+    z-index: 1;
+    inset: 0;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    &::before{
+        content: "";
+        border: 3px solid variables.$colour-primary;
+        border-left-color: variables.$colour-secondary;
+        border-radius: 50%;
+        animation: spin $spin-duration $spin-count linear;
+        width: 10rem;
+        height: 10rem;
+
+
+    }
+}

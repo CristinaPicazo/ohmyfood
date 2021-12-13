@@ -20,8 +20,6 @@
     }
     h3{
         margin: 1rem 0.5rem;
-        font-size: 15px;
-        font-weight: normal;
         &:before{
             border-bottom: solid variables.$colour-tertiary;
             content: "";
@@ -43,7 +41,6 @@
         cursor: pointer;
 
         .description{
-            white-space: nowrap;
             flex: 1.5;
             padding: 1rem;
             p{

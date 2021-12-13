@@ -1,3 +1,19 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes appear {
   0% {
     transform: translateY(-50%);
@@ -19,11 +35,25 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 100;
+  transition-delay: 3s;
 }
 
 h1, h2 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 200;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+}
+
+h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu-list .list .card i {
@@ -96,6 +126,27 @@ h1, h2 {
   content: "\f004";
 }
 
+.loader {
+  animation: disappear 1s forwards 16s;
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+.loader::before {
+  content: "";
+  border: 3px solid #9356DC;
+  border-left-color: #FF79DA;
+  border-radius: 50%;
+  animation: spin 4s 4 linear;
+  width: 10rem;
+  height: 10rem;
+}
+
 header .logo {
   text-align: center;
   margin: auto;
@@ -161,6 +212,8 @@ header .logo img {
 .info button:hover {
   transform: scale(1.2);
   cursor: pointer;
+  background: linear-gradient(0deg, #a16be0, #ff93e1);
+  box-shadow: 0px 9px 16px -4px #bfbfbf;
 }
 
 .instructions {
@@ -284,10 +337,6 @@ header .logo img {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-  .menu-list h3 {
-    font-size: 12px;
-    font-weight: normal;
-  }
 }
 @media only screen and (min-width: 992px) {
   /* For desktop: */
@@ -315,8 +364,6 @@ header .logo img {
 }
 .menu h3 {
   margin: 1rem 0.5rem;
-  font-size: 15px;
-  font-weight: normal;
 }
 .menu h3:before {
   border-bottom: solid #99E2D0;
@@ -342,7 +389,6 @@ header .logo img {
   animation-delay: 300ms;
 }
 .menu .card .description {
-  white-space: nowrap;
   flex: 1.5;
   padding: 1rem;
 }
@@ -389,6 +435,8 @@ header .logo img {
 .order:hover {
   transform: scale(1.2);
   cursor: pointer;
+  background: linear-gradient(0deg, #a16be0, #ff93e1);
+  box-shadow: 0px 9px 16px -4px #bfbfbf;
 }
 
 @media only screen and (min-width: 1100px) {
