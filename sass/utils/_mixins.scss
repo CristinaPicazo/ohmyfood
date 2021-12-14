@@ -1,6 +1,6 @@
 @use './variables';
 
-@mixin heart($font-weight:200, $color:none){    
+@mixin heart($font-weight:200, $color:inherit){    
     position: absolute;
     bottom: 1rem;
     right: 1rem;
@@ -21,8 +21,6 @@
 
 @mixin shadows{
     box-shadow: 0px 7px 7px 0px darken(variables.$colour-medium, 10%) inset;
-    -webkit-box-shadow: 0px 7px 7px 0px darken(variables.$colour-medium, 10%) inset;
-    -moz-box-shadow: 0px 7px 7px 0px darken(variables.$colour-medium, 10%) inset;
 }
 
 @mixin tick{ 

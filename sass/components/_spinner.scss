@@ -3,7 +3,7 @@
 
 .loader{
     $spin-count: 4;
-    $spin-duration: 4s;
+    $spin-duration: 1s;
     $disappear-duration: 1s;
     animation: disappear $disappear-duration forwards $spin-count*$spin-duration;
     position: fixed;
@@ -22,7 +22,5 @@
         animation: spin $spin-duration $spin-count linear;
         width: 10rem;
         height: 10rem;
-
-
     }
 }

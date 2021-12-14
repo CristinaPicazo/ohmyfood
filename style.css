@@ -9,9 +9,11 @@
 @keyframes disappear {
   0% {
     opacity: 1;
+    z-index: 1;
   }
   100% {
     opacity: 0;
+    z-index: 0;
   }
 }
 @keyframes appear {
@@ -66,7 +68,7 @@ h4 {
   border: none;
   align-self: end;
   cursor: pointer;
-  color: none;
+  color: inherit;
 }
 .menu-list .list .card i::before {
   font-family: "Font Awesome 5 Free";
@@ -101,7 +103,7 @@ h4 {
   border: none;
   align-self: end;
   cursor: pointer;
-  color: none;
+  color: inherit;
 }
 .menu-list .header-menu i::before {
   font-family: "Font Awesome 5 Free";
@@ -127,7 +129,7 @@ h4 {
 }
 
 .loader {
-  animation: disappear 1s forwards 16s;
+  animation: disappear 1s forwards 4s;
   position: fixed;
   z-index: 1;
   inset: 0;
@@ -142,7 +144,7 @@ h4 {
   border: 3px solid #9356DC;
   border-left-color: #FF79DA;
   border-radius: 50%;
-  animation: spin 4s 4 linear;
+  animation: spin 1s 4 linear;
   width: 10rem;
   height: 10rem;
 }
@@ -168,8 +170,6 @@ header .logo img {
   text-align: center;
   padding: 1rem 0;
   box-shadow: 0px 7px 7px 0px #d9d9d9 inset;
-  -webkit-box-shadow: 0px 7px 7px 0px #d9d9d9 inset;
-  -moz-box-shadow: 0px 7px 7px 0px #d9d9d9 inset;
 }
 .location i {
   padding-right: 0.5rem;
@@ -227,7 +227,6 @@ header .logo img {
 .instructions nav ol {
   counter-reset: li;
   list-style: none;
-  *list-style: decimal;
   border-radius: 0.3em;
 }
 .instructions nav ol li {
@@ -254,6 +253,7 @@ header .logo img {
   font-size: 12px;
   border-radius: 50%;
   aspect-ratio: 1;
+  height: 2rem;
   display: grid;
   place-items: center;
   width: 2rem;
