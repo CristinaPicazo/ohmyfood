@@ -34,7 +34,6 @@
                 color: white;
                 font-size: 12px;
                 border-radius: 50%;
-                aspect-ratio: 1;
                 height: 2rem;
                 display: grid;
                 place-items: center;
@@ -46,7 +45,7 @@
 
 
             }
-            .nav__link--active{
+            .nav--link--active{
                 background: #ead7ffa6;
                 i{
                     color: variables.$colour-primary;
