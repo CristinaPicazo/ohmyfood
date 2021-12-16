@@ -3,77 +3,82 @@
 @use '../utils/mixins';
 @use '../utils/animations';
 
-.restaurant-picture{
-    z-index: -1;
-    position: relative;
-    margin-bottom: -3rem;
-}
-.menu{
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
-    .header-menu{
+
+    .restaurant-picture{
+        z-index: -1;
         position: relative;
-        display: flex;
-        i{
-            text-align: end;
-        }
+        margin-bottom: -3rem;
     }
-    h3{
-        margin: 1rem 0.5rem;
-        &:before{
-            border-bottom: solid variables.$colour-tertiary;
-            content: "";
-            position: absolute;
-            width: 2rem;
-            height: 1rem;
-            padding: 0.2rem;
-        }
-    }
-    .card{
-        @for $i from 1 through 3{
-            &:nth-child(#{$i}){
-                animation-delay: 100ms * $i;
-            }
-        }
-        animation: appear 1s;
-        display: flex;
-        flex-direction: row;
-        cursor: pointer;
-
-        .description{
-            flex: 1.5;
-            padding: 1rem;
-            p{
-                padding: 0.5rem 0;
-            }
-        }
-        
-        .price{
-            align-self: center;
-            text-align: end;
-            flex: 0.5;
-            font-weight: bold;
-            padding: 0 1rem;
-        }
-
-        &:hover > i{
-            @include mixins.tick;
-        }
-
-        i{
+    .menu{
+        min-width: variables.$min-screen;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+        .header-menu{
+            position: relative;
             display: flex;
-            color: white;
-            align-items: center;
+            i{
+                text-align: end;
+            }
+        }
+        h3{
+            margin: 1rem 0.5rem;
+            &:before{
+                border-bottom: solid variables.$colour-tertiary;
+                content: "";
+                position: absolute;
+                width: 2rem;
+                height: 1rem;
+                padding: 0.2rem;
+            }
+        }
+        .card{
+            @for $i from 1 through 3{
+                &:nth-child(#{$i}){
+                    animation-delay: 100ms * $i;
+                }
+            }
+            animation: appear 3s;
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+
+            .description{
+                flex: 1.5;
+                padding: 1rem;
+                p{
+                    padding: 0.5rem 0;
+                }
+            }
+            
+            .price{
+                align-self: center;
+                text-align: end;
+                flex: 0.5;
+                font-weight: bold;
+                padding: 0 1rem;
+                
+            }
+
+            &:hover > i{
+                @include mixins.tick;
+            }
+
+            i{
+                display: flex;
+                color: white;
+                align-items: center;
+
+            }
         }
     }
-}
+    
+    
+    .order{
+        @include mixins.button(10rem);
+    }
 
 
-.order{
-    @include mixins.button(10rem);
-}
-
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: variables.$desktop) {
     /* For desktop: */ 
     .menu{
         .dishes{

@@ -1,19 +1,21 @@
+@use '../utils/variables';
 
-header{
-    .logo{
-        text-align: center;
-        margin: auto;
-        vertical-align: middle;
-        display: flex;
-        margin: 0.5rem 1rem;
-        i{
-            color: black;
-
-        }
-        img{
-            height: 2rem;
-            width: 10rem;
+    header{
+        min-width: variables.$min-screen;
+        .logo{
+            text-align: center;
             margin: auto;
+            vertical-align: middle;
+            display: flex;
+            margin: 0.5rem 1rem;
+            i{
+                color: black;
+
+            }
+            img{
+                height: 2rem;
+                width: 10rem;
+                margin: auto;
+            }
         }
     }
-}

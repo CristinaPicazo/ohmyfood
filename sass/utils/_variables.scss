@@ -6,3 +6,7 @@ $colour-background: #FFFFFF;
 $colour-location: darken($colour-background,10%);
 $colour-medium: darken($colour-background, 5%);
 $colour-footer: darken($colour-background, 80%);
+
+$min-screen: 240px;
+$tablet:  768px;
+$desktop: 992px;

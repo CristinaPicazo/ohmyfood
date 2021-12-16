@@ -29,12 +29,14 @@
         border: 1px solid variables.$colour-tertiary;
         padding: 2rem 1.5rem;
         font-size: 20px;
-        align-self: end;
         cursor: pointer;
         background-color: variables.$colour-tertiary;
         color: variables.$colour-background;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
+        ::before{
+            background-color: blue;
+        }
 
 }
 
