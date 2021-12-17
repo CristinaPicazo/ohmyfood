@@ -11,18 +11,20 @@ h1, h2 {
     font-family: 'Shrikhand', sans-serif;
     font-weight: 200;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
 }
 
 h3{
+    font-size: 15px;    
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
-    font-size: 15px;
-    
 }
 
 h4{
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
 
 }

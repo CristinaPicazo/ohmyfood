@@ -2,25 +2,22 @@
 @use '../components/hearts';
 @use '../utils/mixins';
 
-    .restaurant-picture{
-        height: 20rem;
-        width: 100%;
-        object-fit: cover;
+.restaurant-picture{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
 
+}
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    background: variables.$colour-medium;
+    padding: 2rem 1rem;
+    h2{
+        margin: 2rem 0;
     }
-    .menu-list{
-        min-width: variables.$min-screen;
-        display: flex;
-        flex-direction: column;
-        background: variables.$colour-medium;
-        padding: 0 1rem;
-
-
-        h2{
-            margin: 2rem 0;
-        }
-
-        .card{
+    .menu-list__list{
+        .list__card{
             background: variables.$colour-background;
             margin: 0.5rem auto;
             border-radius: 20px;
@@ -41,14 +38,14 @@
                     object-fit: cover;
                     position: relative;
                 }
-                .new-box{
+                .list__card__new-box{
                     position: absolute;
                     top: 1rem;
                     right: 1rem;
                     background: variables.$colour-tertiary;
                     padding: 0.5rem 2rem;
                 }
-                .card-text{
+                .list__card__card-text{
                     padding: 0.5rem 1rem;
                         
                 }
@@ -56,16 +53,16 @@
             
         }
     }
+}
 
 
 
 @media (min-width: variables.$tablet) {
-    /* For tablets: */
     .menu-list{
         h2{
             text-align: center;
         }
-        .list{
+        .menu-list__list{
             display: grid;
             grid-template-columns: repeat(2,1fr);
             gap: 1rem;
@@ -75,9 +72,8 @@
 }
 
 @media only screen and (min-width: variables.$desktop) {
-    /* For desktop: */ 
     .menu-list{
-        .list{
+        .menu-list__list{
             display: flex;
             flex-wrap: nowrap;
         }

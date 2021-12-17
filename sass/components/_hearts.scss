@@ -1,31 +1,23 @@
 @use '../utils/variables';
 @use '../utils/mixins';
 
-.menu-list{
-    .list{
-        .card{
-            i{
-                @include mixins.heart;
-                &:hover{
-                    @include mixins.heart(900,variables.$colour-primary);
-                }
-            }
-        }
-
+.fa-heart{
+    @include mixins.heart;
+    &:hover{
+        @include mixins.heart(900,variables.$colour-background-gradient);
     }
 }
 
-.menu-list{
-   .header-menu{
-       i{
-           @include mixins.heart;
-           &:hover{
-            @include mixins.heart(900,variables.$colour-primary);
-           }
-       }
 
+.fa-heart{
+    @include mixins.heart;
+    &:hover{
+    @include mixins.heart(900,variables.$colour-background-gradient);
     }
 }
+
+
+
 
 
 

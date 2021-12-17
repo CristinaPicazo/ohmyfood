@@ -4,34 +4,34 @@
 @use '../utils/animations';
 
 
-    .restaurant-picture{
-        z-index: -1;
+.restaurant-picture{
+    z-index: -1;
+    position: relative;
+    margin-bottom: -3rem;
+}
+.menu{
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    .menu__header-menu{
         position: relative;
-        margin-bottom: -3rem;
+        display: flex;
+        i{
+            text-align: end;
+        }
     }
-    .menu{
-        min-width: variables.$min-screen;
-        border-top-right-radius: 50px;
-        border-top-left-radius: 50px;
-        .header-menu{
-            position: relative;
-            display: flex;
-            i{
-                text-align: end;
-            }
+    h3{
+        margin: 1rem 0.5rem;
+        &:before{
+            border-bottom: solid variables.$colour-tertiary;
+            content: "";
+            position: absolute;
+            width: 2rem;
+            height: 1rem;
+            padding: 0.2rem;
         }
-        h3{
-            margin: 1rem 0.5rem;
-            &:before{
-                border-bottom: solid variables.$colour-tertiary;
-                content: "";
-                position: absolute;
-                width: 2rem;
-                height: 1rem;
-                padding: 0.2rem;
-            }
-        }
-        .card{
+    }
+    .dishes{
+        .dishes__card{
             @for $i from 1 through 3{
                 &:nth-child(#{$i}){
                     animation-delay: 100ms * $i;
@@ -41,21 +41,32 @@
             display: flex;
             flex-direction: row;
             cursor: pointer;
+            background: variables.$colour-background;
+            margin: 1rem auto;
+            border-radius: 20px;
+            position: relative;
 
-            .description{
+            .card__description{
                 flex: 1.5;
-                padding: 1rem;
+                padding: 1rem 0.5rem;
+                h4{
+                    max-width: 70%;
+                }
                 p{
                     padding: 0.5rem 0;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    max-width: 70%;
                 }
             }
             
-            .price{
+            .card__price{
                 align-self: center;
                 text-align: end;
                 flex: 0.5;
                 font-weight: bold;
-                padding: 0 1rem;
+                padding: 0 0.5rem;
                 
             }
 
@@ -71,23 +82,23 @@
             }
         }
     }
+}
     
     
-    .order{
-        @include mixins.button(10rem);
-    }
+.order{
+    @include mixins.button(10rem);
+}
 
 
 @media only screen and (min-width: variables.$desktop) {
-    /* For desktop: */ 
-    .menu{
-        .dishes{
-            display: flex;
-        
-            .card{
-                margin: 0.5rem;
-            }
+.menu{
+    .dishes{
+        display: flex;
+    
+        .dishes__card{
+            margin: 0.5rem;
         }
     }
+}
 
 }

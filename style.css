@@ -43,21 +43,24 @@ h1, h2 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 200;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 h3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 h4 {
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menu-list .list .card i {
+.fa-heart {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -67,14 +70,14 @@ h4 {
   border: none;
   align-self: end;
   cursor: pointer;
-  color: inherit;
+  background-color: inherit;
 }
-.menu-list .list .card i::before {
+.fa-heart::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 200;
   content: "\f004";
 }
-.menu-list .list .card i:hover {
+.fa-heart:hover {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -84,15 +87,15 @@ h4 {
   border: none;
   align-self: end;
   cursor: pointer;
-  color: #9356DC;
+  background-color: linear-gradient(0deg, #a16be0, #ff93e1);
 }
-.menu-list .list .card i:hover::before {
+.fa-heart:hover::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f004";
 }
 
-.menu-list .header-menu i {
+.fa-heart {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -102,14 +105,14 @@ h4 {
   border: none;
   align-self: end;
   cursor: pointer;
-  color: inherit;
+  background-color: inherit;
 }
-.menu-list .header-menu i::before {
+.fa-heart::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 200;
   content: "\f004";
 }
-.menu-list .header-menu i:hover {
+.fa-heart:hover {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -119,9 +122,9 @@ h4 {
   border: none;
   align-self: end;
   cursor: pointer;
-  color: #9356DC;
+  background-color: linear-gradient(0deg, #a16be0, #ff93e1);
 }
-.menu-list .header-menu i:hover::before {
+.fa-heart:hover::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f004";
@@ -149,7 +152,7 @@ h4 {
 }
 
 header {
-  min-width: 240px;
+  min-width: 400px;
 }
 header .logo {
   text-align: center;
@@ -168,7 +171,7 @@ header .logo img {
 }
 
 .location {
-  min-width: 240px;
+  min-width: 400px;
   background-color: #e6e6e6;
   text-align: center;
   padding: 1rem 0;
@@ -189,7 +192,7 @@ header .logo img {
 }
 
 .info {
-  min-width: 240px;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,18 +213,18 @@ header .logo img {
   color: #FFFFFF;
   border-style: none;
   transition: all 0.3s ease 0s;
-  box-shadow: 0px 9px 16px -4px #d9d9d9;
+  box-shadow: 0px 9px 16px -4px #bfbfbf;
   margin: 2rem auto;
 }
 .info button:hover {
   transform: scale(1.2);
   cursor: pointer;
   background: linear-gradient(0deg, #a16be0, #ff93e1);
-  box-shadow: 0px 9px 16px -4px #bfbfbf;
+  box-shadow: 0px 9px 16px -4px #d9d9d9;
 }
 
 .instructions {
-  min-width: 240px;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   margin: 2rem 1rem;
@@ -290,16 +293,15 @@ header .logo img {
 }
 
 .menu-list {
-  min-width: 240px;
   display: flex;
   flex-direction: column;
   background: #f2f2f2;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
 }
 .menu-list h2 {
   margin: 2rem 0;
 }
-.menu-list .card {
+.menu-list .menu-list__list .list__card {
   background: #FFFFFF;
   margin: 0.5rem auto;
   border-radius: 20px;
@@ -308,12 +310,12 @@ header .logo img {
   position: relative;
   width: 100%;
 }
-.menu-list .card a {
+.menu-list .menu-list__list .list__card a {
   color: black;
   text-decoration: none;
   padding-bottom: 0.5rem;
 }
-.menu-list .card a img {
+.menu-list .menu-list__list .list__card a img {
   height: 10rem;
   width: 100%;
   border-top-right-radius: 20px;
@@ -321,31 +323,29 @@ header .logo img {
   object-fit: cover;
   position: relative;
 }
-.menu-list .card a .new-box {
+.menu-list .menu-list__list .list__card a .list__card__new-box {
   position: absolute;
   top: 1rem;
   right: 1rem;
   background: #99E2D0;
   padding: 0.5rem 2rem;
 }
-.menu-list .card a .card-text {
+.menu-list .menu-list__list .list__card a .list__card__card-text {
   padding: 0.5rem 1rem;
 }
 
 @media (min-width: 768px) {
-  /* For tablets: */
   .menu-list h2 {
     text-align: center;
   }
-  .menu-list .list {
+  .menu-list .menu-list__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 }
 @media only screen and (min-width: 992px) {
-  /* For desktop: */
-  .menu-list .list {
+  .menu-list .menu-list__list {
     display: flex;
     flex-wrap: nowrap;
   }
@@ -357,15 +357,14 @@ header .logo img {
 }
 
 .menu {
-  min-width: 240px;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
 }
-.menu .header-menu {
+.menu .menu__header-menu {
   position: relative;
   display: flex;
 }
-.menu .header-menu i {
+.menu .menu__header-menu i {
   text-align: end;
 }
 .menu h3 {
@@ -379,51 +378,59 @@ header .logo img {
   height: 1rem;
   padding: 0.2rem;
 }
-.menu .card {
+.menu .dishes .dishes__card {
   animation: appear 3s;
   display: flex;
   flex-direction: row;
   cursor: pointer;
+  background: #FFFFFF;
+  margin: 1rem auto;
+  border-radius: 20px;
+  position: relative;
 }
-.menu .card:nth-child(1) {
+.menu .dishes .dishes__card:nth-child(1) {
   animation-delay: 100ms;
 }
-.menu .card:nth-child(2) {
+.menu .dishes .dishes__card:nth-child(2) {
   animation-delay: 200ms;
 }
-.menu .card:nth-child(3) {
+.menu .dishes .dishes__card:nth-child(3) {
   animation-delay: 300ms;
 }
-.menu .card .description {
+.menu .dishes .dishes__card .card__description {
   flex: 1.5;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
 }
-.menu .card .description p {
+.menu .dishes .dishes__card .card__description h4 {
+  max-width: 70%;
+}
+.menu .dishes .dishes__card .card__description p {
   padding: 0.5rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 70%;
 }
-.menu .card .price {
+.menu .dishes .dishes__card .card__price {
   align-self: center;
   text-align: end;
   flex: 0.5;
   font-weight: bold;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
-.menu .card:hover > i {
+.menu .dishes .dishes__card:hover > i {
   visibility: visible;
   display: flex;
   border: 1px solid #99E2D0;
   padding: 2rem 1.5rem;
   font-size: 20px;
   cursor: pointer;
-  background-color: #99E2D0;
+  background-image: linear-gradient(#c1ede2, #99E2D0);
   color: #FFFFFF;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.menu .card:hover > i ::before {
-  background-color: blue;
-}
-.menu .card i {
+.menu .dishes .dishes__card i {
   display: flex;
   color: white;
   align-items: center;
@@ -437,27 +444,26 @@ header .logo img {
   color: #FFFFFF;
   border-style: none;
   transition: all 0.3s ease 0s;
-  box-shadow: 0px 9px 16px -4px #d9d9d9;
+  box-shadow: 0px 9px 16px -4px #bfbfbf;
   margin: 2rem auto;
 }
 .order:hover {
   transform: scale(1.2);
   cursor: pointer;
   background: linear-gradient(0deg, #a16be0, #ff93e1);
-  box-shadow: 0px 9px 16px -4px #bfbfbf;
+  box-shadow: 0px 9px 16px -4px #d9d9d9;
 }
 
 @media only screen and (min-width: 992px) {
-  /* For desktop: */
   .menu .dishes {
     display: flex;
   }
-  .menu .dishes .card {
+  .menu .dishes .dishes__card {
     margin: 0.5rem;
   }
 }
 footer {
-  min-width: 240px;
+  min-width: 400px;
   background: #333333;
   color: white;
   padding: 1.5rem;

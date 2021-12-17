@@ -6,7 +6,11 @@ $colour-background: #FFFFFF;
 $colour-location: darken($colour-background,10%);
 $colour-medium: darken($colour-background, 5%);
 $colour-footer: darken($colour-background, 80%);
+$colour-background-gradient: linear-gradient(0deg, lighten($colour-primary,5), lighten($colour-secondary,5));
+$box-shadow-light: 0px 9px 16px -4px darken($colour-medium, 10%);
+$box-shadow-darken: 0px 9px 16px -4px darken($colour-medium, 20%);
 
-$min-screen: 240px;
+
+$min-screen: 400px;
 $tablet:  768px;
 $desktop: 992px;

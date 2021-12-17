@@ -10,7 +10,7 @@
     border: none;
     align-self: end;
     cursor: pointer;
-    color: $color;
+    background-color: $color;
     &::before{
         font-family: "Font Awesome 5 Free";
         font-weight: $font-weight;
@@ -30,13 +30,10 @@
         padding: 2rem 1.5rem;
         font-size: 20px;
         cursor: pointer;
-        background-color: variables.$colour-tertiary;
+        background-image: linear-gradient(lighten(variables.$colour-tertiary,10), variables.$colour-tertiary);
         color: variables.$colour-background;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
-        ::before{
-            background-color: blue;
-        }
 
 }
 
@@ -48,13 +45,13 @@
     color: variables.$colour-background;
     border-style: none;
     transition: all 0.3s ease 0s;
-    box-shadow: 0px 9px 16px -4px darken(variables.$colour-medium, 10%);
+    box-shadow: variables.$box-shadow-darken;
     margin: 2rem auto;
     &:hover{
         transform: scale(1.2);
         cursor: pointer;
-        background: linear-gradient(0deg, lighten(variables.$colour-primary,5), lighten(variables.$colour-secondary,5));
-        box-shadow: 0px 9px 16px -4px darken(variables.$colour-medium, 20%);
+        background: variables.$colour-background-gradient;
+        box-shadow: variables.$box-shadow-light;
 
     }
 }
