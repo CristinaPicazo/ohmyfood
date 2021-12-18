@@ -1,4 +1,5 @@
 @use './variables';
+@use './animations';
 
 @mixin heart($font-weight:200, $color:inherit){    
     position: absolute;
@@ -10,7 +11,7 @@
     border: none;
     align-self: end;
     cursor: pointer;
-    background-color: $color;
+    color: $color;
     &::before{
         font-family: "Font Awesome 5 Free";
         font-weight: $font-weight;
@@ -24,17 +25,21 @@
 }
 
 @mixin tick{ 
-        visibility: visible;
-        display: flex;
-        border: 1px solid variables.$colour-tertiary;
-        padding: 2rem 1.5rem;
-        font-size: 20px;
-        cursor: pointer;
-        background-image: linear-gradient(lighten(variables.$colour-tertiary,10), variables.$colour-tertiary);
-        color: variables.$colour-background;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
+    display: flex;
+    border: 1px solid variables.$colour-tertiary;
+    padding: 2rem 1.5rem;
+    cursor: pointer;
+    background-image: linear-gradient(lighten(variables.$colour-tertiary,10), variables.$colour-tertiary);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    visibility: visible;
 
+    i{
+        content: "";
+        font-size: 20px;
+        animation: tick-animation 1s;
+        color: variables.$colour-background;
+    }
 }
 
 @mixin button($width:15rem){

@@ -25,6 +25,14 @@
     opacity: 1;
   }
 }
+@keyframes tick-animation {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 *,
 *::after,
 *::before {
@@ -70,7 +78,7 @@ h4 {
   border: none;
   align-self: end;
   cursor: pointer;
-  background-color: inherit;
+  color: inherit;
 }
 .fa-heart::before {
   font-family: "Font Awesome 5 Free";
@@ -78,6 +86,7 @@ h4 {
   content: "\f004";
 }
 .fa-heart:hover {
+  transform: scale(1.2);
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -87,42 +96,7 @@ h4 {
   border: none;
   align-self: end;
   cursor: pointer;
-  background-color: linear-gradient(0deg, #a16be0, #ff93e1);
-}
-.fa-heart:hover::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f004";
-}
-
-.fa-heart {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  height: 2rem;
-  width: 2rem;
-  font-size: 20px;
-  border: none;
-  align-self: end;
-  cursor: pointer;
-  background-color: inherit;
-}
-.fa-heart::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 200;
-  content: "\f004";
-}
-.fa-heart:hover {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  height: 2rem;
-  width: 2rem;
-  font-size: 20px;
-  border: none;
-  align-self: end;
-  cursor: pointer;
-  background-color: linear-gradient(0deg, #a16be0, #ff93e1);
+  color: linear-gradient(0deg, #a16be0, #ff93e1);
 }
 .fa-heart:hover::before {
   font-family: "Font Awesome 5 Free";
@@ -387,6 +361,8 @@ header .logo img {
   margin: 1rem auto;
   border-radius: 20px;
   position: relative;
+  width: 100%;
+  align-items: center;
 }
 .menu .dishes .dishes__card:nth-child(1) {
   animation-delay: 100ms;
@@ -418,22 +394,24 @@ header .logo img {
   font-weight: bold;
   padding: 0 0.5rem;
 }
-.menu .dishes .dishes__card:hover > i {
-  visibility: visible;
+.menu .dishes .dishes__card:hover > .tick {
   display: flex;
   border: 1px solid #99E2D0;
   padding: 2rem 1.5rem;
-  font-size: 20px;
   cursor: pointer;
   background-image: linear-gradient(#c1ede2, #99E2D0);
-  color: #FFFFFF;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  visibility: visible;
 }
-.menu .dishes .dishes__card i {
-  display: flex;
+.menu .dishes .dishes__card:hover > .tick i {
+  content: "";
+  font-size: 20px;
+  animation: tick-animation 1s;
+  color: #FFFFFF;
+}
+.menu .dishes .dishes__card .fa-check-circle {
   color: white;
-  align-items: center;
 }
 
 .order {

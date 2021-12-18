@@ -4,15 +4,8 @@
 .fa-heart{
     @include mixins.heart;
     &:hover{
+        transform: scale(1.2);
         @include mixins.heart(900,variables.$colour-background-gradient);
-    }
-}
-
-
-.fa-heart{
-    @include mixins.heart;
-    &:hover{
-    @include mixins.heart(900,variables.$colour-background-gradient);
     }
 }
 
