@@ -6,7 +6,7 @@ $colour-background: #FFFFFF;
 $colour-location: darken($colour-background,10%);
 $colour-medium: darken($colour-background, 5%);
 $colour-footer: darken($colour-background, 80%);
-$colour-background-gradient: linear-gradient(0deg, lighten($colour-primary,5), lighten($colour-secondary,5));
+$colour-background-gradient: linear-gradient(0deg, lighten($colour-secondary,5),lighten($colour-primary,2));
 $box-shadow-light: 0px 9px 16px -4px darken($colour-medium, 10%);
 $box-shadow-darken: 0px 9px 16px -4px darken($colour-medium, 20%);
 

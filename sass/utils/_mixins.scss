@@ -12,6 +12,8 @@
     align-self: end;
     cursor: pointer;
     color: $color;
+    background-image: variables.$colour-background-gradient;
+    -webkit-background-clip: text;
     &::before{
         font-family: "Font Awesome 5 Free";
         font-weight: $font-weight;

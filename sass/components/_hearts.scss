@@ -5,7 +5,7 @@
     @include mixins.heart;
     &:hover{
         transform: scale(1.2);
-        @include mixins.heart(900,variables.$colour-background-gradient);
+        @include mixins.heart(900, transparent);
     }
 }
 

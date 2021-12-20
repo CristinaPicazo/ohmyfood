@@ -79,6 +79,8 @@ h4 {
   align-self: end;
   cursor: pointer;
   color: inherit;
+  background-image: linear-gradient(0deg, #ff93e1, #985ede);
+  -webkit-background-clip: text;
 }
 .fa-heart::before {
   font-family: "Font Awesome 5 Free";
@@ -96,7 +98,9 @@ h4 {
   border: none;
   align-self: end;
   cursor: pointer;
-  color: linear-gradient(0deg, #a16be0, #ff93e1);
+  color: transparent;
+  background-image: linear-gradient(0deg, #ff93e1, #985ede);
+  -webkit-background-clip: text;
 }
 .fa-heart:hover::before {
   font-family: "Font Awesome 5 Free";
@@ -193,7 +197,7 @@ header .logo img {
 .info button:hover {
   transform: scale(1.2);
   cursor: pointer;
-  background: linear-gradient(0deg, #a16be0, #ff93e1);
+  background: linear-gradient(0deg, #ff93e1, #985ede);
   box-shadow: 0px 9px 16px -4px #d9d9d9;
 }
 
@@ -428,7 +432,7 @@ header .logo img {
 .order:hover {
   transform: scale(1.2);
   cursor: pointer;
-  background: linear-gradient(0deg, #a16be0, #ff93e1);
+  background: linear-gradient(0deg, #ff93e1, #985ede);
   box-shadow: 0px 9px 16px -4px #d9d9d9;
 }
 

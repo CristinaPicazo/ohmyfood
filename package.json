@@ -4,6 +4,7 @@
   "description": "ohmyfood",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./style.css",
+    "build": "postcss ./sass/main.scss:./style.css",
     "prefix": "postcss --help"
   },
   "repository": {
@@ -18,8 +19,12 @@
   },
   "homepage": "https://github.com/CristinaPicazo/maintainable-css-with-sass#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.0",
     "postcss": "^8.3.11",
     "postcss-cli": "^9.0.1",
     "sass": "^1.43.5"
+  },
+  "dependencies": {
+    "postcss-validator": "^0.2.0"
   }
 }
