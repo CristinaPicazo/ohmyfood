@@ -1,25 +1,23 @@
 @use './variables';
 @use './animations';
 
-@mixin heart($font-weight:200, $color:inherit){    
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    height: 2rem;
-    width: 2rem;
-    font-size: 20px;
-    border: none;
-    align-self: end;
-    cursor: pointer;
-    color: $color;
-    background-image: variables.$colour-background-gradient;
-    -webkit-background-clip: text;
-    &::before{
-        font-family: "Font Awesome 5 Free";
-        font-weight: $font-weight;
+@mixin heart{ 
+    &::after, &::before{
+        position: absolute;
         content: "\f004";
-    }
-
+        font-family: "Font Awesome 5 Free";
+        bottom: 1rem;
+        right: 1rem;
+        height: 2rem;
+        width: 2rem;
+        font-size: 20px;
+        border: none;
+        align-self: end;
+        cursor: pointer;
+        font-weight: 400;
+        color: inherit;
+        
+    } 
 }
 
 @mixin shadows{

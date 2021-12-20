@@ -5,7 +5,7 @@
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./style.css",
     "build": "postcss ./sass/main.scss:./style.css",
-    "prefix": "postcss --help"
+    "prefix": "postcss *.css --use autoprefixer --use cssnano -d build --watch"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   },
   "author": "Cristina",
   "license": "ISC",
-  "browserlist": "last 4 versions",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/CristinaPicazo/maintainable-css-with-sass/issues"
   },
@@ -25,6 +25,7 @@
     "sass": "^1.43.5"
   },
   "dependencies": {
+    "cssnano": "^5.0.14",
     "postcss-validator": "^0.2.0"
   }
 }

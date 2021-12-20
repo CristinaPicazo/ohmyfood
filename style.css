@@ -6,6 +6,17 @@
     transform: rotate(360deg);
   }
 }
+@keyframes heart-effect {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes disappear {
   0% {
     opacity: 1;
@@ -68,8 +79,13 @@ h4 {
   text-overflow: ellipsis;
 }
 
-.fa-heart {
+.list__card, .menu__header-menu {
+  transition: all 0.2s ease-in-out;
+}
+.list__card::after, .list__card::before, .menu__header-menu::after, .menu__header-menu::before {
   position: absolute;
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
   bottom: 1rem;
   right: 1rem;
   height: 2rem;
@@ -78,34 +94,17 @@ h4 {
   border: none;
   align-self: end;
   cursor: pointer;
+  font-weight: 400;
   color: inherit;
-  background-image: linear-gradient(0deg, #ff93e1, #985ede);
-  -webkit-background-clip: text;
 }
-.fa-heart::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 200;
-  content: "\f004";
-}
-.fa-heart:hover {
-  transform: scale(1.2);
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  height: 2rem;
-  width: 2rem;
-  font-size: 20px;
-  border: none;
-  align-self: end;
-  cursor: pointer;
-  color: transparent;
-  background-image: linear-gradient(0deg, #ff93e1, #985ede);
-  -webkit-background-clip: text;
-}
-.fa-heart:hover::before {
-  font-family: "Font Awesome 5 Free";
+.list__card:hover::before, .menu__header-menu:hover::before {
   font-weight: 900;
-  content: "\f004";
+  -webkit-background-clip: text;
+  background-image: linear-gradient(0deg, #ff93e1, #985ede);
+  color: transparent;
+  border: none;
+  animation: heart-effect 1s;
+  z-index: 1;
 }
 
 .loader {

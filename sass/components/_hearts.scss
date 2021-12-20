@@ -1,12 +1,18 @@
 @use '../utils/variables';
 @use '../utils/mixins';
 
-.fa-heart{
+.list__card, .menu__header-menu{
     @include mixins.heart;
-    &:hover{
-        transform: scale(1.2);
-        @include mixins.heart(900, transparent);
-    }
+    transition: all 0.2s ease-in-out;
+    &:hover::before{
+        font-weight: 900;
+        -webkit-background-clip: text;
+        background-image: variables.$colour-background-gradient;
+        color: transparent;
+        border: none;
+        animation: heart-effect 1s;
+        z-index: 1;
+    }    
 }
 
 
