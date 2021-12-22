@@ -3,14 +3,14 @@
 
 .list__card, .menu__header-menu{
     @include mixins.heart;
-    transition: all 0.2s ease-in-out;
+    
     &:hover::before{
         font-weight: 900;
         -webkit-background-clip: text;
         background-image: variables.$colour-background-gradient;
         color: transparent;
         border: none;
-        animation: heart-effect 1s;
+        animation: heart-effect 1s linear;
         z-index: 1;
     }    
 }

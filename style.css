@@ -6,6 +6,17 @@
     transform: rotate(360deg);
   }
 }
+@keyframes heart-effect-off {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes heart-effect {
   0% {
     opacity: 0;
@@ -34,6 +45,14 @@
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@keyframes green-box {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 @keyframes tick-animation {
@@ -79,9 +98,6 @@ h4 {
   text-overflow: ellipsis;
 }
 
-.list__card, .menu__header-menu {
-  transition: all 0.2s ease-in-out;
-}
 .list__card::after, .list__card::before, .menu__header-menu::after, .menu__header-menu::before {
   position: absolute;
   content: "\f004";
@@ -96,6 +112,7 @@ h4 {
   cursor: pointer;
   font-weight: 400;
   color: inherit;
+  animation: heart-effect-off 2s;
 }
 .list__card:hover::before, .menu__header-menu:hover::before {
   font-weight: 900;
@@ -230,6 +247,13 @@ header .logo img {
 .instructions nav ol li i {
   padding-right: 1.5rem;
 }
+.instructions nav ol li:hover {
+  background: #ead7ffa6;
+  cursor: pointer;
+}
+.instructions nav ol li:hover i {
+  color: #9356DC;
+}
 .instructions nav ol li:before {
   content: counter(li);
   counter-increment: li;
@@ -245,12 +269,6 @@ header .logo img {
   top: 50%;
   transform: translate(-50%, -50%);
   left: 0;
-}
-.instructions nav ol .nav--link--active {
-  background: #ead7ffa6;
-}
-.instructions nav ol .nav--link--active i {
-  color: #9356DC;
 }
 
 @media (min-width: 768px) {
@@ -366,6 +384,7 @@ header .logo img {
   position: relative;
   width: 100%;
   align-items: center;
+  overflow: hidden;
 }
 .menu .dishes .dishes__card:nth-child(1) {
   animation-delay: 100ms;
@@ -379,6 +398,7 @@ header .logo img {
 .menu .dishes .dishes__card .card__description {
   flex: 1.5;
   padding: 1rem 0.5rem;
+  overflow: hidden;
 }
 .menu .dishes .dishes__card .card__description h4 {
   max-width: 70%;
@@ -406,6 +426,7 @@ header .logo img {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   visibility: visible;
+  animation: green-box 1s ease-in-out;
 }
 .menu .dishes .dishes__card:hover > .tick i {
   content: "";

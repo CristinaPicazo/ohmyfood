@@ -47,10 +47,13 @@
             position: relative;
             width: 100%;
             align-items: center;
+            overflow: hidden;
+
             
             .card__description{
                 flex: 1.5;
                 padding: 1rem 0.5rem;
+                overflow: hidden;
                 h4{
                     max-width: 70%;
                 }
@@ -71,10 +74,13 @@
                 padding: 0 0.5rem;
                 
             }
-            &:hover > .tick{     
-                @include mixins.tick;
+            .tick{
+                animation: green-box-off 1s linear;
+                &:hover > .tick{     
+                    @include mixins.tick;
+                }
+                
             }
-            
             .fa-check-circle{
                 color: white;
 

@@ -10,13 +10,26 @@
     }
 }
 
+@keyframes heart-effect-off {
+    0%{
+        opacity: 1;
+        
+    }
+    50%{        
+        opacity: 0.5;
+    }
+    100%{        
+        opacity: 0; 
+      
+    }
+}
+
 @keyframes heart-effect {
     0%{
         opacity: 0;
         
     }
-    50%{
-        
+    50%{        
         opacity: 0.5;
     }
     100%{        
@@ -47,11 +60,31 @@
     }
 }
 
+@keyframes green-box {
+    0%{
+        transform: translateX(100%);
+        
+    }
+    100%{        
+        transform: translateX(0);
+      
+    }
+}
+
+@keyframes green-box-off {
+    0%{
+        transform: translateX(0);
+        
+    }
+    100%{        
+        transform: translateX(100%);
+      
+    }
+}
 @keyframes tick-animation {
     0%{
         transform: rotate(-180deg);
-
-
+        
     }
     100%{        
         transform: rotate(0deg);  

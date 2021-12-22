@@ -27,6 +27,13 @@
                 i{
                     padding-right: 1.5rem;
                 }
+                &:hover{
+                    background: #ead7ffa6;
+                    cursor: pointer;
+                    i{
+                        color: variables.$colour-primary;
+                    }
+                }
             }
             li:before {
                 content:counter(li);
@@ -45,12 +52,7 @@
                 left: 0;
 
 
-            }
-            .nav--link--active{
-                background: #ead7ffa6;
-                i{
-                    color: variables.$colour-primary;
-                }
+
             }
         }
     }

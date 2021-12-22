@@ -15,8 +15,8 @@
         align-self: end;
         cursor: pointer;
         font-weight: 400;
-        color: inherit;
-        
+        color: inherit;    
+        animation: heart-effect-off 2s linear;  
     } 
 }
 
@@ -33,6 +33,8 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     visibility: visible;
+    animation: green-box 1s ease-in-out;
+    
 
     i{
         content: "";
