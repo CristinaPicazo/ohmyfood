@@ -15,9 +15,14 @@
         align-self: end;
         cursor: pointer;
         font-weight: 400;
-        color: inherit;    
-        animation: heart-effect-off 2s linear;  
+        color: inherit;
+        
+        &::before{
+            -webkit-transition: heart-effect 1s linear;
+        }
+
     } 
+
 }
 
 @mixin shadows{
@@ -33,13 +38,13 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     visibility: visible;
-    animation: green-box 1s ease-in-out;
+    animation: green-box 1s;
     
 
     i{
         content: "";
         font-size: 20px;
-        animation: tick-animation 1s;
+        animation: tick-animation 1s linear;
         color: variables.$colour-background;
     }
 }

@@ -55,6 +55,14 @@
     transform: translateX(0);
   }
 }
+@keyframes green-box-off {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
 @keyframes tick-animation {
   0% {
     transform: rotate(-180deg);
@@ -112,7 +120,9 @@ h4 {
   cursor: pointer;
   font-weight: 400;
   color: inherit;
-  animation: heart-effect-off 2s;
+}
+.list__card::after::before, .list__card::before::before, .menu__header-menu::after::before, .menu__header-menu::before::before {
+  -webkit-transition: heart-effect 1s linear;
 }
 .list__card:hover::before, .menu__header-menu:hover::before {
   font-weight: 900;
@@ -120,7 +130,7 @@ h4 {
   background-image: linear-gradient(0deg, #ff93e1, #985ede);
   color: transparent;
   border: none;
-  animation: heart-effect 1s;
+  animation: heart-effect 1s linear;
   z-index: 1;
 }
 
@@ -426,13 +436,16 @@ header .logo img {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   visibility: visible;
-  animation: green-box 1s ease-in-out;
+  animation: green-box 1s;
 }
 .menu .dishes .dishes__card:hover > .tick i {
   content: "";
   font-size: 20px;
-  animation: tick-animation 1s;
+  animation: tick-animation 1s linear;
   color: #FFFFFF;
+}
+.menu .dishes .dishes__card .tick {
+  -webkit-transition: reverse tick-animation 1s linear;
 }
 .menu .dishes .dishes__card .fa-check-circle {
   color: white;
