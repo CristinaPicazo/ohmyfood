@@ -6,26 +6,15 @@
     transform: rotate(360deg);
   }
 }
-@keyframes heart-effect-off {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 @keyframes heart-effect {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   50% {
     opacity: 0.5;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 @keyframes disappear {
@@ -34,7 +23,6 @@
   }
   100% {
     opacity: 0;
-    visibility: hidden;
   }
 }
 @keyframes appear {
@@ -53,14 +41,6 @@
   }
   100% {
     transform: translateX(0);
-  }
-}
-@keyframes green-box-off {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
   }
 }
 @keyframes tick-animation {
@@ -121,17 +101,18 @@ h4 {
   font-weight: 400;
   color: inherit;
 }
-.list__card::after::before, .list__card::before::before, .menu__header-menu::after::before, .menu__header-menu::before::before {
-  -webkit-transition: heart-effect 1s linear;
-}
-.list__card:hover::before, .menu__header-menu:hover::before {
+.list__card::before, .menu__header-menu::before {
   font-weight: 900;
   -webkit-background-clip: text;
   background-image: linear-gradient(0deg, #ff93e1, #985ede);
   color: transparent;
   border: none;
-  animation: heart-effect 1s linear;
+  transition: opacity 1s ease-in-out;
   z-index: 1;
+  opacity: 0;
+}
+.list__card:hover::before, .menu__header-menu:hover::before {
+  opacity: 1;
 }
 
 .loader {
@@ -427,7 +408,7 @@ header .logo img {
   font-weight: bold;
   padding: 0 0.5rem;
 }
-.menu .dishes .dishes__card:hover > .tick {
+.menu .dishes .dishes__card .tick {
   display: flex;
   border: 1px solid #99E2D0;
   padding: 2rem 1.5rem;
@@ -435,17 +416,16 @@ header .logo img {
   background-image: linear-gradient(#c1ede2, #99E2D0);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  visibility: visible;
-  animation: green-box 1s;
+  transition: transform 1s linear;
 }
-.menu .dishes .dishes__card:hover > .tick i {
+.menu .dishes .dishes__card .tick:hover {
+  transform: translateX(-100%);
+}
+.menu .dishes .dishes__card .tick i {
   content: "";
   font-size: 20px;
   animation: tick-animation 1s linear;
   color: #FFFFFF;
-}
-.menu .dishes .dishes__card .tick {
-  -webkit-transition: reverse tick-animation 1s linear;
 }
 .menu .dishes .dishes__card .fa-check-circle {
   color: white;

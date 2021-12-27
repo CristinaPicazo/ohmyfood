@@ -16,12 +16,20 @@
         cursor: pointer;
         font-weight: 400;
         color: inherit;
-        
-        &::before{
-            -webkit-transition: heart-effect 1s linear;
-        }
-
     } 
+    &::before{
+        font-weight: 900;
+        -webkit-background-clip: text;
+        background-image: variables.$colour-background-gradient;
+        color: transparent;
+        border: none;
+        transition: opacity 1s ease-in-out;
+        z-index: 1;
+        opacity: 0;
+
+        
+
+    }    
 
 }
 
@@ -37,10 +45,10 @@
     background-image: linear-gradient(lighten(variables.$colour-tertiary,10), variables.$colour-tertiary);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    visibility: visible;
-    animation: green-box 1s;
-    
-
+    transition: transform 1s linear;
+    &:hover{
+        transform: translateX(-100%);
+    }
     i{
         content: "";
         font-size: 20px;

@@ -4,7 +4,6 @@
   "description": "ohmyfood",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./style.css",
-    "build": "postcss ./sass/main.scss:./style.css",
     "prefix": "postcss *.css --use autoprefixer --use cssnano -d build --watch"
   },
   "repository": {

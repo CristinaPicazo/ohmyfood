@@ -3,18 +3,9 @@
 
 .list__card, .menu__header-menu{
     @include mixins.heart;
-    
     &:hover::before{
-        font-weight: 900;
-        -webkit-background-clip: text;
-        background-image: variables.$colour-background-gradient;
-        color: transparent;
-        border: none;
-        animation: heart-effect 1s linear;
-        z-index: 1;
-        
-
-    }    
+        opacity: 1;
+    }
 }
 
 

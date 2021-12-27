@@ -74,12 +74,9 @@
                 padding: 0 0.5rem;
                 
             }
-            &:hover > .tick{     
+    
+            .tick{     
                 @include mixins.tick;
-            }
-            .tick{
-                -webkit-transition: reverse tick-animation 1s linear;
-                //animation: green-box-off 1s linear;
             }
 
             .fa-check-circle{
