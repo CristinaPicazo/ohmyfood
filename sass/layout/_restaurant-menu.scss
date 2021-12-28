@@ -31,13 +31,16 @@
         }
     }
     .dishes{
+        
         .dishes__card{
             @for $i from 1 through 3{
                 &:nth-child(#{$i}){
                     animation-delay: 100ms * $i;
                 }
             }
-            animation: appear 3s;
+            animation: menu-appear 3s;
+            //transition: opacity 2s;
+            //opacity: 0;
             display: flex;
             flex-direction: row;
             cursor: pointer;
@@ -48,7 +51,6 @@
             width: 100%;
             align-items: center;
             overflow: hidden;
-
             
             .card__description{
                 flex: 1.5;
@@ -71,18 +73,29 @@
                 text-align: end;
                 flex: 0.5;
                 font-weight: bold;
-                padding: 0 0.5rem;
-                
+                margin: 0 1rem;
+                transition: transform 1s linear;
             }
-    
-            .tick{     
-                @include mixins.tick;
+            .green-box{
+                @include mixins.green-box;
+            }      
+            &:hover{
+                .card__price{
+                    transform: translateX(-50%);
+                }
+                .green-box{
+                    margin-left: 2rem;
+                    transform: translateX(-100%);
+                    .fa-check-circle{
+                        content: "";
+                        font-size: 20px;
+                        color: variables.$colour-background;
+                        transform: rotate(360deg);
+                    }
+                }
+        
             }
 
-            .fa-check-circle{
-                color: white;
-
-            }
         }
     }
 }

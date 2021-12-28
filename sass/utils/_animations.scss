@@ -1,39 +1,23 @@
 @keyframes spin {
     0%{
         transform: rotate(0deg);
-
-
     }
     100%{        
-        transform: rotate(360deg);  
-      
-    }
-}
-
-@keyframes heart-effect {
-    0%{
-        opacity: 1;        
-    }
-    50%{        
-        opacity: 0.5;
-    }
-    100%{        
-        opacity: 0;
-      
+        transform: rotate(360deg);        
     }
 }
 
 @keyframes disappear{
     0%{
-        opacity: 1;
-        
+        opacity: 1;        
     }
     100%{
         opacity: 0;
+        visibility: hidden;
     }
 }
 
-@keyframes appear {
+@keyframes menu-appear {
     0%{
         transform: translateY(-50%);
         opacity: 0;
@@ -41,27 +25,5 @@
     100%{
         transform: translateY(0);
         opacity: 1;
-    }
-}
-
-@keyframes green-box {
-    0%{
-        transform: translateX(100%);
-        
-    }
-    100%{        
-        transform: translateX(0);
-      
-    }
-}
-
-@keyframes tick-animation {
-    0%{
-        transform: rotate(-180deg);
-        
-    }
-    100%{        
-        transform: rotate(0deg);  
-      
     }
 }
