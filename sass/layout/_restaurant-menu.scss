@@ -31,16 +31,13 @@
         }
     }
     .dishes{
-        
         .dishes__card{
             @for $i from 1 through 3{
                 &:nth-child(#{$i}){
-                    animation-delay: 100ms * $i;
+                    animation: menu-appear 3s (300ms * $i) forwards;
                 }
             }
-            animation: menu-appear 3s;
-            //transition: opacity 2s;
-            //opacity: 0;
+            opacity: 0;
             display: flex;
             flex-direction: row;
             cursor: pointer;
