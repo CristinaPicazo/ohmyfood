@@ -12,7 +12,7 @@
   }
   100% {
     opacity: 0;
-    visibility: hidden;
+    z-index: -1;
   }
 }
 @keyframes menu-appear {
@@ -392,23 +392,24 @@ header .logo img {
   border-bottom-right-radius: 20px;
   transition: transform 1s linear;
   margin-right: -4.5rem;
-  transition: transform 1s linear;
 }
 .menu .dishes .dishes__card .green-box .fa-check-circle {
   color: white;
+  content: "";
+  font-size: 20px;
+  color: #FFFFFF;
   transition: transform 1s linear;
 }
 .menu .dishes .dishes__card:hover .card__price {
   transform: translateX(-50%);
+  padding: 2rem 1.5rem;
 }
 .menu .dishes .dishes__card:hover .green-box {
   margin-left: 2rem;
   transform: translateX(-100%);
 }
 .menu .dishes .dishes__card:hover .green-box .fa-check-circle {
-  content: "";
-  font-size: 20px;
-  color: #FFFFFF;
+  transition: transform 1s linear;
   transform: rotate(360deg);
 }
 

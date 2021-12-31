@@ -79,14 +79,13 @@
             &:hover{
                 .card__price{
                     transform: translateX(-50%);
+                    padding: 2rem 1.5rem;
                 }
                 .green-box{
                     margin-left: 2rem;
                     transform: translateX(-100%);
                     .fa-check-circle{
-                        content: "";
-                        font-size: 20px;
-                        color: variables.$colour-background;
+                        transition: transform 1s linear;
                         transform: rotate(360deg);
                     }
                 }

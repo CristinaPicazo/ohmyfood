@@ -44,10 +44,12 @@
     border-bottom-right-radius: 20px;
     transition: transform 1s linear;
     margin-right: -4.5rem;
-    transition: transform 1s linear;
     .fa-check-circle{
         color: white;
-        transition: transform 1s linear;
+        content: "";
+        font-size: 20px;
+        color: variables.$colour-background; 
+        transition: transform 1s linear; 
     }
 }
 
