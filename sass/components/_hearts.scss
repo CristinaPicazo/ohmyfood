@@ -3,9 +3,6 @@
 
 .list__card, .menu__header-menu{
     @include mixins.heart;
-    &:hover::before{
-        opacity: 1;
-    }
 }
 
 

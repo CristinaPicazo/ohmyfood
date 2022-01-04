@@ -353,8 +353,11 @@ header .logo img {
 .menu .dishes .dishes__card:nth-child(3) {
   animation: menu-appear 3s 900ms forwards;
 }
+.menu .dishes .dishes__card:nth-child(4) {
+  animation: menu-appear 3s 1200ms forwards;
+}
 .menu .dishes .dishes__card .card__description {
-  flex: 1.5;
+  flex: 1;
   padding: 1rem 0.5rem;
   overflow: hidden;
 }
@@ -366,12 +369,10 @@ header .logo img {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-width: 70%;
 }
 .menu .dishes .dishes__card .card__price {
   align-self: center;
   text-align: end;
-  flex: 0.5;
   font-weight: bold;
   margin: 0 1rem;
   transition: transform 1s linear;
@@ -386,6 +387,7 @@ header .logo img {
   border-bottom-right-radius: 20px;
   transition: transform 1s linear;
   margin-right: -4.5rem;
+  margin-left: 2rem;
 }
 .menu .dishes .dishes__card .green-box .fa-check-circle {
   color: white;
@@ -394,15 +396,13 @@ header .logo img {
   color: #FFFFFF;
   transition: transform 1s linear;
 }
-.menu .dishes .dishes__card:hover .card__price {
-  transform: translateX(-50%);
+.menu .dishes .dishes__card .green-box .fa-check-circle {
+  transition: transform 1s linear;
 }
-.menu .dishes .dishes__card:hover .green-box {
-  margin-left: 2rem;
+.menu .dishes .dishes__card:hover .card__price, .menu .dishes .dishes__card:hover .green-box {
   transform: translateX(-100%);
 }
-.menu .dishes .dishes__card:hover .green-box .fa-check-circle {
-  transition: transform 1s linear;
+.menu .dishes .dishes__card:hover .fa-check-circle {
   transform: rotate(360deg);
 }
 
@@ -437,8 +437,7 @@ footer {
   color: white;
 }
 footer h2 {
-  padding: 1.5rem;
-  margin-bottom: 1rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
 }
 footer ul {
   padding: 1.5rem;

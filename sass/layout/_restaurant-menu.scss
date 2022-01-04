@@ -32,7 +32,7 @@
     }
     .dishes{
         .dishes__card{
-            @for $i from 1 through 3{
+            @for $i from 1 through 4{
                 &:nth-child(#{$i}){
                     animation: menu-appear 3s (300ms * $i) forwards;
                 }
@@ -50,7 +50,7 @@
             overflow: hidden;
             
             .card__description{
-                flex: 1.5;
+                flex: 1;
                 padding: 1rem 0.5rem;
                 overflow: hidden;
                 h4{
@@ -61,32 +61,29 @@
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
-                    max-width: 70%;
                 }
             }
             
             .card__price{
                 align-self: center;
                 text-align: end;
-                flex: 0.5;
                 font-weight: bold;
                 margin: 0 1rem;
                 transition: transform 1s linear;
             }
             .green-box{
                 @include mixins.green-box;
+                .fa-check-circle{
+                    transition: transform 1s linear;
+                }
             }      
             &:hover{
-                .card__price{
-                    transform: translateX(-50%);
-                }
-                .green-box{
-                    margin-left: 2rem;
+                .card__price, .green-box{
                     transform: translateX(-100%);
-                    .fa-check-circle{
-                        transition: transform 1s linear;
-                        transform: rotate(360deg);
-                    }
+                }
+                .fa-check-circle{
+                    transform: rotate(360deg);
+                    
                 }
         
             }
