@@ -1,8 +1,7 @@
 @use '../utils/variables';
 
     header{
-        min-width: variables.$min-screen;
-        .logo{
+            .logo{
             text-align: center;
             margin: auto;
             vertical-align: middle;

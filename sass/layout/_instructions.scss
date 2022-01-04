@@ -1,7 +1,6 @@
 @use '../utils/variables';
 
 .instructions{
-    min-width: variables.$min-screen;
     display: flex;
     flex-direction: column;
     margin: 2rem 1rem;

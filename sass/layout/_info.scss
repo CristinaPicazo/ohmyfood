@@ -2,7 +2,6 @@
 @use '../utils/mixins';
 
 .info{
-    min-width: variables.$min-screen;
     display: flex;
     flex-direction: column;
     align-items: center;

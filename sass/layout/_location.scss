@@ -2,7 +2,6 @@
 @use '../utils/mixins';
 
 .location{
-    min-width: variables.$min-screen;
     background-color: variables.$colour-location;
     text-align: center;
     padding: 1rem 0;
