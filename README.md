@@ -14,6 +14,8 @@ We would like to open our services in the French capital.
   * Phase 1: Develop a site offering the menu of four great Parisian restaurants.
   * Phase 2: Allow online booking and menu composition.
 
-  
+# GitHub Repository
+https://github.com/CristinaPicazo/ohmyfood.git
+
 # Published
  https://cristinapicazo.github.io/ohmyfood/
